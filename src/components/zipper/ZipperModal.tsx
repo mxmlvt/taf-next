@@ -58,7 +58,7 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
       {/* Panel */}
-      <div className="relative bg-white shadow-2xl w-full max-w-3xl max-h-[92vh] overflow-hidden flex flex-col sm:flex-row">
+      <div className="relative bg-white shadow-2xl w-full max-w-[1075px] max-h-[92vh] overflow-hidden flex flex-col sm:flex-row">
 
         {/* Close */}
         <button
@@ -76,8 +76,8 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
         ) : data ? (
           <>
             {/* Left: image — object-contain so full product is visible */}
-            <div className="sm:w-[45%] flex-shrink-0 bg-gray-50 flex items-center justify-center min-h-[280px] sm:min-h-[420px]">
-              <div className="relative w-full h-full min-h-[280px] sm:min-h-[420px]">
+            <div className="sm:w-[45%] flex-shrink-0 bg-gray-50 flex items-center justify-center min-h-[390px] sm:min-h-[590px]">
+              <div className="relative w-full h-full min-h-[390px] sm:min-h-[590px]">
                 <Image
                   src={data.thumbnailUrl}
                   alt={data.thumbnailAlt || data.name}

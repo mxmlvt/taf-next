@@ -9,7 +9,7 @@ export default function ZipperGrid({ zippers }: ZipperGridProps) {
   if (!zippers.length) return null;
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {zippers.map(zipper => (
         <ZipperCard key={zipper.id} zipper={zipper} />
       ))}

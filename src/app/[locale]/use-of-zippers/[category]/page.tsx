@@ -41,7 +41,7 @@ const PL_TO_EN: Record<string, string> = {
 type Props = { params: Promise<{ locale: string; category: string }> };
 
 export async function generateStaticParams() {
-  const entries = Object.entries(CATEGORY_SLUGS);
+  const entries = Object.entries(CATEGORY_SLUGS).filter(([slug]) => slug !== 'furniture');
   return [
     ...entries.map(([slug]) => ({ locale: 'en', category: slug })),
     ...entries.map(([slug]) => ({ locale: 'pl', category: slug })),
@@ -78,6 +78,8 @@ export default async function CategoryPage({ params }: Props) {
   const { locale, category } = await params;
   const enSlug = resolveEnSlug(category);
   if (!enSlug) notFound();
+  // Temporarily removed from site due to patent law requirements; files preserved for future use
+  if (enSlug === 'furniture') notFound();
 
   const meta = CATEGORY_SLUGS[enSlug!];
 

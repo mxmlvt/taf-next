@@ -45,13 +45,6 @@ const CATEGORIES = [
     img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
-    labelEn: 'Furniture',
-    labelPl: 'Meble',
-    hrefEn: '/use-of-zippers/furniture/',
-    hrefPl: '/pl/zastosowanie-zamkow/meble/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-44.png',
-  },
-  {
     labelEn: 'Buckles & Plastic Hardware',
     labelPl: 'Zapięcia & elementy plastikowe',
     hrefEn: '/use-of-zippers/buckles-plastic-hardware/',
@@ -309,38 +302,6 @@ export default async function UseOfZippersPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Furniture section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <FadeIn direction="right" delay={0.1} className="order-2 lg:order-1 relative aspect-[4/3] overflow-hidden">
-              <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/i7-1024x1024.png"
-                alt={isEn ? 'Zippers for Furniture' : 'Zamki do mebli'}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </FadeIn>
-            <FadeIn direction="left" className="order-1 lg:order-2">
-              <h2 className="font-[Jost] text-2xl sm:text-3xl font-light text-[#111] mb-5">
-                {isEn ? 'Locks for the furniture industry that contribute to modern interiors' : 'Zamki dla branży meblarskiej, które współtworzą nowoczesne wnętrza'}
-              </h2>
-              <p className="font-[Jost] text-gray-500 text-base leading-relaxed mb-6">
-                {isEn
-                  ? 'In the furniture industry, zippers are primarily used in the production of upholstered furniture – covers, seats, backrests, headrests and modules that require easy assembly and disassembly. Their main task is to ensure a durable but discreet connection of fabric elements without interfering with the aesthetics of the design. Our store offers zippers that, thanks to their flat design, uniform colours and precise guidance, integrate perfectly with the fabric surface.'
-                  : 'W branży meblarskiej zamki błyskawiczne wykorzystywane są przede wszystkim w produkcji mebli tapicerowanych – pokrowców, siedzisk, oparć, zagłówków oraz modułów wymagających łatwego montażu i demontażu. Ich głównym zadaniem jest zapewnienie trwałego, ale dyskretnego łączenia elementów materiałowych, bez ingerencji w estetykę projektu. W naszym sklepie oferujemy zamki, które dzięki płaskiej budowie, jednolitej kolorystyce i precyzyjnemu prowadzeniu doskonale integrują się z powierzchnią tkaniny.'}
-              </p>
-              <Link
-                href={isEn ? '/use-of-zippers/furniture/' : '/pl/use-of-zippers/furniture/'}
-                className="inline-block bg-[#111] text-white font-[Jost] text-sm px-7 py-3 hover:bg-gray-800 transition-colors"
-              >
-                {isEn ? 'See furniture zippers' : 'Zobacz zamki meblowe'}
-              </Link>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
 
       {/* Accessories + Specialized zippers — one dark section */}
       <section className="py-16 bg-[#111111] text-white">

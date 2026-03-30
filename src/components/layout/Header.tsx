@@ -41,11 +41,6 @@ const USE_CATS_EN = [
     img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
-    label: 'Zippers for furniture',
-    href: '/use-of-zippers/furniture/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-44.png',
-  },
-  {
     label: 'Buckles & plastic hardware',
     href: '/use-of-zippers/buckles-plastic-hardware/',
     img: 'https://trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
@@ -77,11 +72,6 @@ const USE_CATS_PL = [
     label: 'Zamki dla mody',
     href: '/pl/use-of-zippers/fashion/',
     img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
-  },
-  {
-    label: 'Zamki do mebli',
-    href: '/pl/use-of-zippers/furniture/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-44.png',
   },
   {
     label: 'Zapięcia i elementy plastikowe',

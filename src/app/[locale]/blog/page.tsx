@@ -26,6 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// EN posts were bulk-imported with wrong dates; these match the original PL publication dates
+const EN_DATE_FIX: Record<string, string> = {
+  'zippers-for-bags-and-backpacks': '2025-07-02T22:47:44',
+  'zippers-in-the-furniture-industry': '2025-07-02T22:30:38',
+  'where-to-buy-zippers-wholesale': '2025-06-27T14:49:29',
+  'coil-zippers-characteristics-and-subtypes': '2025-06-27T14:06:42',
+  'zippers-comparison-metal-plastic-and-nylon': '2025-06-20T10:03:16',
+  'how-to-fix-zipper-problems': '2025-05-23T15:27:39',
+  'how-to-recognize-a-high-quality-zipper': '2025-05-14T15:49:31',
+};
+
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
   const { posts } = await getBlogPosts(locale as Locale);
@@ -85,7 +96,7 @@ export default async function BlogPage({ params }: Props) {
                         </div>
                       )}
                     </div>
-                    <time className="text-xs text-gray-400 font-[Jost]">{formatDate(post.date, locale as Locale)}</time>
+                    <time className="text-xs text-gray-400 font-[Jost]">{formatDate(locale === 'en' ? (EN_DATE_FIX[post.slug] || post.date) : post.date, locale as Locale)}</time>
                     <h2
                       className="font-[Jost] font-medium text-lg mt-1 mb-2 group-hover:text-gray-600 transition-colors line-clamp-2"
                       dangerouslySetInnerHTML={{ __html: post.title.rendered }}

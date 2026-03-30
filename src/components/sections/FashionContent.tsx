@@ -118,10 +118,19 @@ export default function FashionContent({ locale, position }: Props) {
         </div>
       </section>
 
-      {/* ── Snaps ── */}
+      {/* ── Snaps ── image LEFT / text RIGHT */}
       <section className="py-16 bg-[#f5f3ef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+            <div className="overflow-hidden group">
+              <Image
+                src={`${WP}2025/07/snapfastening-1024x673.png`}
+                alt={isEn ? 'Snap fastening' : 'Zapięcie napowe'}
+                width={700} height={460}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
             <div>
               <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111]">
                 {isEn ? 'Snaps' : 'Napy'}
@@ -138,15 +147,6 @@ export default function FashionContent({ locale, position }: Props) {
                     : 'Oferujemy szeroki wybór napów dla wszystkich branż \u2013 od metalowych lub plastikowych napów do odzieży dziecięcej po napy klasy militarnej z plastikową nakładką zgodną z wymaganiami NIR. W ofercie mamy też napy do zastosowań morskich odporne na promieniowanie UV i słoną wodę, a także ognioodporne plastikowe napy do profesjonalnej odzieży roboczej, które są zawsze antystatyczne i wodoodporne.'}
                 </p>
               </div>
-            </div>
-            <div className="overflow-hidden group">
-              <Image
-                src={`${WP}2025/07/snapfastening-1024x673.png`}
-                alt={isEn ? 'Snap fastening' : 'Zapięcie napowe'}
-                width={700} height={460}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default function FashionContent({ locale, position }: Props) {
               </p>
             </div>
           </div>
-          {/* 3 small images below */}
+          {/* 3 small images below – equal height with aspect ratio */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
@@ -220,12 +220,12 @@ export default function FashionContent({ locale, position }: Props) {
               },
             ].map((item, i) => (
               <div key={i}>
-                <div className="overflow-hidden group mb-2">
+                <div className="aspect-[4/3] overflow-hidden group mb-2">
                   <Image
                     src={item.src}
                     alt={item.label}
-                    width={400} height={400}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    width={400} height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
                 </div>
@@ -236,10 +236,52 @@ export default function FashionContent({ locale, position }: Props) {
         </div>
       </section>
 
-      {/* ── Invisible Zippers – Sport ── */}
+      {/* ── Invisible Zippers – Sport ── 3-col: stacked images | large image | text */}
       <section className="py-16 bg-[#f5f3ef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            {/* Col 1: 2 stacked small images with captions */}
+            <div className="flex flex-col gap-4">
+              <div>
+                <div className="overflow-hidden group mb-2">
+                  <Image
+                    src={`${WP}2025/10/d9c8a4fa-e94f-43b7-8c8b-81e3bb3de3d0.png`}
+                    alt={isEn ? 'Sport cam-lock puller – autolock' : 'Suwak sport cam-lock – autolock'}
+                    width={300} height={400}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500 bg-white"
+                    sizes="25vw"
+                  />
+                </div>
+                <p className="font-[Jost] text-xs text-gray-400">
+                  {isEn ? 'Sport cam-lock pullers – autolock' : 'Suwaki sport cam-lock – autolock'}
+                </p>
+              </div>
+              <div>
+                <div className="overflow-hidden group mb-2">
+                  <Image
+                    src={`${WP}2025/10/9f2d421f-9de0-4ae9-a9c2-81667fa4ffd6.png`}
+                    alt={isEn ? 'Sport cam-lock puller – non autolock' : 'Suwak sport cam-lock – non autolock'}
+                    width={300} height={400}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500 bg-white"
+                    sizes="25vw"
+                  />
+                </div>
+                <p className="font-[Jost] text-xs text-gray-400">
+                  {isEn ? 'Sport cam-lock pullers – non autolock' : 'Suwaki sport cam-lock – non autolock'}
+                </p>
+              </div>
+            </div>
+            {/* Col 2: large center image */}
+            <div className="overflow-hidden group">
+              <Image
+                src={`${WP}2025/10/5b15d6a3-0776-40d8-91b4-f842e2f7f0a4.png`}
+                alt={isEn ? 'Invisible sport zipper' : 'Zamek kryty sportowy'}
+                width={400} height={600}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="33vw"
+              />
+            </div>
+            {/* Col 3: title + text */}
             <div>
               <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111]">
                 {isEn ? 'Invisible Zippers (hidden, concealed)' : 'Zamki kryte (ukryte, niewidoczne)'}
@@ -255,34 +297,17 @@ export default function FashionContent({ locale, position }: Props) {
                     ? 'Great function and invisibility and stay-down pullers designed to minimize movement of the puller that is not necessary during exercises.'
                     : 'Doskonała funkcja i niewidoczność oraz suwaki stay-down zaprojektowane w celu minimalizowania ruchu suwaka niepotrzebnego podczas ćwiczeń.'}
                 </p>
-                <p className="font-[Jost] text-gray-600 text-sm">
+                <p>
                   {isEn
                     ? 'Invisible zippers with staydown puller \u2013 autolock / nonlock'
                     : 'Zamki kryte z suwakiem staydown \u2013 autolock / nonlock'}
                 </p>
-                <p className="font-[Jost] text-gray-600 text-sm">
+                <p>
                   {isEn
                     ? 'Invisible zippers for a sportswear with special unique function \u2013 like open end or waterproof with lamination'
                     : 'Zamki kryte do odzieży sportowej ze specjalną unikalną funkcją \u2013 np. rozdzielne lub wodoodporne z laminacją'}
                 </p>
               </div>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                `${WP}2025/10/d9c8a4fa-e94f-43b7-8c8b-81e3bb3de3d0.png`,
-                `${WP}2025/10/9f2d421f-9de0-4ae9-a9c2-81667fa4ffd6.png`,
-                `${WP}2025/10/5b15d6a3-0776-40d8-91b4-f842e2f7f0a4.png`,
-              ].map((src, i) => (
-                <div key={i} className="overflow-hidden group bg-white">
-                  <Image
-                    src={src}
-                    alt={isEn ? `Sport invisible zipper ${i + 1}` : `Zamek kryty sportowy ${i + 1}`}
-                    width={300} height={400}
-                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                    sizes="20vw"
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -314,17 +339,17 @@ export default function FashionContent({ locale, position }: Props) {
                 </p>
               </div>
             </div>
-            <div className="overflow-hidden group">
+            <div className="h-96 overflow-hidden group">
               <Image
                 src={`${WP}2025/10/99e556cb-cbb5-4b3b-8ffb-62a669f6142d.jpg`}
                 alt={isEn ? 'Metal zipper Y teeth' : 'Zamek metalowy ząbki Y'}
                 width={700} height={600}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
-          {/* 3 small images below */}
+          {/* 3 small images below – equal height with aspect ratio */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
@@ -341,12 +366,12 @@ export default function FashionContent({ locale, position }: Props) {
               },
             ].map((item, i) => (
               <div key={i}>
-                <div className="overflow-hidden group mb-2">
+                <div className="aspect-[4/3] overflow-hidden group mb-2">
                   <Image
                     src={item.src}
                     alt={item.label}
-                    width={400} height={400}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    width={400} height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
                 </div>

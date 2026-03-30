@@ -109,10 +109,12 @@ const FAQ_PL = [
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Use of Zippers | TAF' : 'Zastosowanie zamków | TAF',
+    title: locale === 'en'
+      ? 'Zipper Applications by Industry | Military, Sports & Fashion | TAF'
+      : 'Zastosowanie Zamków Błyskawicznych | Wojsko Sport i Moda | TAF',
     description: locale === 'en'
-      ? 'Zippers for fire-resistant clothing, military, cycling, fashion, furniture and more. Professional YKK zipper supplier TAF.'
-      : 'Zamki do odzieży ognioodpornej, wojska, kolarstwa, mody, mebli i więcej. Profesjonalny dostawca zamków YKK TAF.',
+      ? 'Specialized zippers for every industry: military & tactical gear, fire protection, sportswear, cycling apparel, fashion, and furniture. Professional-grade solutions.'
+      : 'Specjalistyczne zamki dla każdej branży: wojsko i taktyka, ochrona ogniowa, odzież sportowa, kolarstwo, moda i meble. Rozwiązania profesjonalne.',
     alternates: {
       canonical: locale === 'en'
         ? 'https://trimsandfasteners.com/use-of-zippers/'

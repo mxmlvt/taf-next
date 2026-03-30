@@ -8,10 +8,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'About TAF | Premium Zipper Supplier' : 'O TAF | Dystrybutor YKK',
+    title: locale === 'en'
+      ? 'About TAF | Premium Zipper Supplier & YKK Distributor'
+      : 'O TAF | Dystrybutor YKK i Dostawca Zamków | Warszawa, Polska',
     description: locale === 'en'
-      ? 'Nearly two decades of experience in the global zipper market. Professional YKK distributor serving European manufacturers.'
-      : 'Prawie dwie dekady doświadczenia na globalnym rynku zamków. Profesjonalny dystrybutor YKK obsługujący europejskich producentów.',
+      ? 'TAF - authorized YKK distributor in Warsaw, Poland. Premium zippers and fasteners across Europe. Custom solutions specialist.'
+      : 'TAF (Trims and Fasteners) - autoryzowany dystrybutor YKK z Warszawy. Dostarczamy wysokiej jakości zamki i akcesoria. Działamy w Polsce i międzynarodowo.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/about-us/' : 'https://trimsandfasteners.com/pl/o-nas/',
       languages: { en: 'https://trimsandfasteners.com/about-us/', pl: 'https://trimsandfasteners.com/pl/o-nas/' },

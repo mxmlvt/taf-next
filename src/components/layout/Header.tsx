@@ -460,9 +460,13 @@ export default function Header({ menu, translations }: HeaderProps) {
         </div>
       )}
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-4 py-4">
+      {/* Mobile menu — always in DOM, slides in/out with max-h transition */}
+      <div
+        className={`lg:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-4 py-4">
           {/* Type of Zippers mobile */}
           <div className="mb-2">
             <p className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider font-[Jost]">
@@ -519,7 +523,7 @@ export default function Header({ menu, translations }: HeaderProps) {
             </Link>
           ))}
         </div>
-      )}
+      </div>
     </header>
   );
 }

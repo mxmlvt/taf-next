@@ -67,7 +67,7 @@ export default function Hero({ slides = DEFAULT_SLIDES, title, subtitle, descrip
           <p className="hero-animate font-[Jost] text-white/70 text-base font-light mb-8 max-w-lg leading-relaxed">
             {description || t('description')}
           </p>
-          <div className="hero-animate flex flex-col sm:flex-row gap-3">
+          <div className="hero-animate flex flex-col sm:flex-row gap-3 items-start">
             <a
               href={ctaUrl || '#homepage-content'}
               className="inline-block bg-white text-black font-[Jost] font-medium text-sm px-7 py-3 hover:bg-gray-100 transition-colors cursor-pointer"

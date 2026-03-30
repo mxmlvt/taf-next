@@ -10,10 +10,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Custom Logo Zippers | Personalization | TAF' : 'Zamki z Logo | Personalizacja | TAF',
+    title: locale === 'en'
+      ? 'Custom Logo Zippers | Personalization Zipper Branding Services | TAF'
+      : 'Zamki z Logo | Personalizacja i Branding Zamków | TAF',
     description: locale === 'en'
-      ? 'Personalize your zipper pullers with laser engraving, logo printing, or molding technology. Professional branding from TAF.'
-      : 'Spersonalizuj uchwyty zamków poprzez grawer laserowy, nadruk logotypu lub przygotowanie formy. Profesjonalne usługi brandingu od TAF.',
+      ? 'Custom zipper personalization with your logo or branding. Embossed, printed, or engraved options. Perfect for brand visibility in sportswear, fashion, and workwear. Low MOQ.'
+      : 'Personalizacja zamków z Twoim logo. Nadruk, wytłaczanie, grawer. Niskie MOQ. Idealne dla widoczności marki w odzieży sportowej, modzie i workwear.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/personalization/' : 'https://trimsandfasteners.com/pl/personalizacja/',
       languages: {

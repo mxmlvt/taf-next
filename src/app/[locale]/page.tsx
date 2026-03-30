@@ -12,15 +12,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'TAF - Premium Zippers & Fasteners Supplier | Trims and Fasteners'
       : 'TAF - Kompleksowy Dostawca Zamków | Dystrybutor YKK Polska',
     description: locale === 'en'
-      ? 'Professional supplier of high-quality zippers, fasteners, and bag hardware. YKK distributor.'
-      : 'Profesjonalny dostawca zamków błyskawicznych YKK. Zamki plastikowe, nylonowe i metalowe.',
+      ? 'Professional supplier of high-quality zippers, fasteners, and bag hardware. YKK distributor. Custom solutions for military, sportswear, and fashion industries.'
+      : 'Profesjonalny dostawca zamków błyskawicznych YKK. Zamki plastikowe, nylonowe i metalowe. Rozwiązania dla wojska, odzieży sportowej i mody. Szybka dostawa.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/' : 'https://trimsandfasteners.com/pl/',
       languages: { en: 'https://trimsandfasteners.com/', pl: 'https://trimsandfasteners.com/pl/' },
     },
     openGraph: {
       title: locale === 'en' ? 'TAF - Premium Zippers & Fasteners Supplier' : 'TAF - Kompleksowy Dostawca Zamków',
-      description: locale === 'en' ? 'Professional supplier of high-quality zippers, fasteners, and bag hardware.' : 'Profesjonalny dostawca zamków błyskawicznych YKK.',
+      description: locale === 'en' ? 'Professional supplier of high-quality zippers, fasteners, and bag hardware. YKK distributor. Custom solutions for military, sportswear, and fashion industries.' : 'Profesjonalny dostawca zamków błyskawicznych YKK. Zamki plastikowe, nylonowe i metalowe. Rozwiązania dla wojska, odzieży sportowej i mody.',
       locale: locale === 'en' ? 'en_US' : 'pl_PL',
       type: 'website',
     },

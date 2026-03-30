@@ -8,10 +8,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Contact TAF | Zipper Supplier' : 'Kontakt TAF | Dostawca zamków',
+    title: locale === 'en'
+      ? 'Contact TAF | Get a Quote for Zippers & Fasteners'
+      : 'Kontakt TAF - Zamki Błyskawiczne | Wycena zamówień',
     description: locale === 'en'
-      ? 'Contact TAF for professional zipper supply. YKK distributor serving European manufacturers.'
-      : 'Skontaktuj się z TAF w sprawie profesjonalnych zamków. Dystrybutor YKK.',
+      ? 'Contact TAF for zipper and fastener inquiries. Wholesale quotes, custom solutions, and technical support. Fast response within 24 hours. Serving customers worldwide'
+      : 'Skontaktuj się z TAF w sprawie zamków błyskawicznych. Wyceny hurtowe, doradztwo i wsparcie klientów. Obsługa klientów w Polsce i za granicą.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/contact/' : 'https://trimsandfasteners.com/pl/kontakt/',
       languages: { en: 'https://trimsandfasteners.com/contact/', pl: 'https://trimsandfasteners.com/pl/kontakt/' },

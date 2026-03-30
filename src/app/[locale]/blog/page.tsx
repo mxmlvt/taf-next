@@ -10,10 +10,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Blog | TAF Zippers' : 'Blog | TAF Zamki',
+    title: locale === 'en'
+      ? 'Zipper Guides & Tutorials | TAF Blog'
+      : 'Poradniki i aktualności o Zamkach Błyskawicznych | Blog TAF',
     description: locale === 'en'
-      ? 'News, guides and insights about zippers and fasteners from TAF.'
-      : 'Aktualności, poradniki i informacje o zamkach błyskawicznych od TAF.',
+      ? 'Expert guides on choosing, installing, and maintaining zippers. Industry insights, how-to tutorials, and zipper technology trends. Free resources for manufacturers and designers.'
+      : 'Eksperckie poradniki doboru, montażu i konserwacji zamków. Informacje branżowe, tutoriale i trendy w technologii zamków. Bezpłatne zasoby dla producentów.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/blog/' : 'https://trimsandfasteners.com/pl/blog/',
       languages: {

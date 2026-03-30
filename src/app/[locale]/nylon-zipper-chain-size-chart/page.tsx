@@ -9,10 +9,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Nylon Zipper Chain Size Chart | TAF' : 'Zestawienie rozmiarów taśm spiralnych | TAF',
+    title: locale === 'en'
+      ? 'Zipper Size Chart: Complete Guide to Nylon Zipper Sizes | TAF'
+      : 'Rozmiary Zamków: Kompletna Tabela i Przewodnik | TAF',
     description: locale === 'en'
-      ? 'Complete size chart for YKK nylon zipper chains: N3 through N10, including reverse coil options.'
-      : 'Kompletne zestawienie rozmiarów taśm spiralnych YKK: N3 do N10, w tym wersje rewersowe.',
+      ? 'Complete nylon zipper size chart and guide. Learn what zipper numbers mean (#3, #5, #8, #10), how to measure zipper sizes, and choose the right size for your application.'
+      : 'Kompletna tabela rozmiarów zamków nylonowych. Dowiedz się co oznaczają numery (#3, #5, #8, #10), jak mierzyć zamki i wybrać odpowiedni rozmiar do zastosowania.',
     alternates: {
       canonical: locale === 'en' ? 'https://trimsandfasteners.com/nylon-zipper-chain-size-chart/' : 'https://trimsandfasteners.com/pl/tasmy-spiralne-zestawienie-rozmiarow/',
       languages: {

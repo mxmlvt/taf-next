@@ -81,10 +81,12 @@ const FAQ_PL = [
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === 'en' ? 'Types of Zippers | TAF' : 'Rodzaje zamków | TAF',
+    title: locale === 'en'
+      ? 'Types of Zippers: Complete Guide | Plastic, Nylon & Metal | TAF'
+      : 'Rodzaje Zamków Błyskawicznych | Plastikowe Nylonowe Metalowe',
     description: locale === 'en'
-      ? 'Plastic, nylon and metal zippers from YKK. Professional zipper supplier TAF.'
-      : 'Zamki plastikowe, nylonowe i metalowe YKK. Profesjonalny dostawca zamków TAF.',
+      ? 'Comprehensive guide to zipper types: plastic molded, nylon coil, and metal zippers. Learn differences, applications, and how to choose the right zipper for your project.'
+      : 'Kompletny przewodnik po rodzajach zamków: plastikowe kostkowe, nylonowe spiralne i metalowe. Poznaj różnice, zastosowania i wybierz odpowiedni zamek do projektu.',
     alternates: {
       canonical: locale === 'en'
         ? 'https://trimsandfasteners.com/type-of-zippers/'

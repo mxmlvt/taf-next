@@ -96,7 +96,7 @@ export default function BucklesContent({ locale, position }: Props) {
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <div className="overflow-hidden group bg-white p-3 mb-2">
+                    <div className="overflow-hidden group mb-2">
                       <Image
                         src={`${WP}2025/08/white-Photoroom-14.png`}
                         alt={isEn ? 'YKK buckle LB20WGD back' : 'Klamra YKK LB20WGD tył'}
@@ -112,7 +112,7 @@ export default function BucklesContent({ locale, position }: Props) {
                     </p>
                   </div>
                   <div>
-                    <div className="overflow-hidden group bg-white p-3 mb-2">
+                    <div className="overflow-hidden group mb-2">
                       <Image
                         src={`${WP}2025/08/white-Photoroom-15.png`}
                         alt={isEn ? 'LB20WGD front' : 'LB20WGD przód'}
@@ -122,25 +122,22 @@ export default function BucklesContent({ locale, position }: Props) {
                       />
                     </div>
                     <p className="font-[Jost] text-xs text-gray-500 text-center leading-snug">
-                      LB20WGD -front
+                      LB20WGD - front
                     </p>
                   </div>
                 </div>
               </div>
-              {/* Right: large surface mount buckle */}
+              {/* Right: large image */}
               <div>
-                <div className="overflow-hidden group bg-white p-4 mb-2">
+                <div className="overflow-hidden group mb-2">
                   <Image
-                    src={`${WP}2025/09/surfacemountbuckle.png`}
-                    alt={isEn ? 'Surface mount buckle' : 'Klamra montowana powierzchniowo'}
+                    src={`${WP}2025/08/white-Photoroom-13.png`}
+                    alt={isEn ? 'YKK LB50WGD buckle' : 'Klamra YKK LB50WGD'}
                     width={700} height={600}
                     className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                <p className="font-[Jost] text-xs text-gray-500 text-center">
-                  {isEn ? 'Surface mount buckle, used for a magazine pouch.' : 'Klamra montowana powierzchniowo, stosowana do kieszeni na magazynek.'}
-                </p>
               </div>
             </div>
           </div>
@@ -152,20 +149,15 @@ export default function BucklesContent({ locale, position }: Props) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start mb-10">
               {/* Left: large image + caption */}
               <div>
-                <div className="overflow-hidden group bg-[#f5f3ef] p-4 mb-3">
+                <div className="overflow-hidden group mb-3">
                   <Image
-                    src={`${WP}2025/08/white-Photoroom-13.png`}
-                    alt={isEn ? 'LB50WGD YKK buckle with dual adjuster' : 'Klamra YKK LB50WGD z podwójnym regulatorem'}
-                    width={700} height={600}
+                    src={`${WP}2025/06/zamekplastikowy4-1024x1024.jpg`}
+                    alt={isEn ? 'YKK LB-WG buckle' : 'Klamra YKK LB-WG'}
+                    width={700} height={700}
                     className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                <p className="font-[Jost] text-xs text-gray-500 text-center leading-snug">
-                  {isEn
-                    ? 'LB50WGD (YKK buckle with dual adjuster) \u2013 very good as a belt buckle, very convenient to open/fasten, and easy to operate with one hand.'
-                    : 'LB50WGD (klamra YKK z podwójnym regulatorem) \u2013 doskonała jako klamra pasa, wygodna do otwierania/zapinania jedną ręką.'}
-                </p>
               </div>
               {/* Right: title + text + SHOCKONLOC */}
               <div>
@@ -185,18 +177,26 @@ export default function BucklesContent({ locale, position }: Props) {
                   </p>
                 </div>
                 <p className="font-[Jost] text-sm font-medium mt-8 text-[#a87c7c] tracking-wide">
-                  SHOCKONLOC\u00ae\u00a0\u00a0:\u00a0\u00a0LB-WG | YKK
+                  <a
+                    href="https://ykkeurope.com/product/shockonloc-%ef%bc%9a-lb-wg/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    SHOCKONLOC® ： LB-WG | YKK
+                  </a>
                 </p>
               </div>
             </div>
-            {/* Small image row */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {/* 4 small images row */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                `${WP}2025/08/white-Photoroom-14.png`,
-                `${WP}2025/08/white-Photoroom-15.png`,
-                `${WP}2025/08/white-Photoroom-13.png`,
+                `${WP}2025/06/zamekplastikowy-1024x1024.jpg`,
+                `${WP}2025/06/zamekplastikowydwa-1024x1024.jpg`,
+                `${WP}2025/06/zamekplastikowy3-1024x1024.jpg`,
+                `${WP}2025/06/zamekplastikowy4-1024x1024.jpg`,
               ].map((src, i) => (
-                <div key={i} className="overflow-hidden group bg-[#f5f3ef] p-3">
+                <div key={i} className="overflow-hidden group">
                   <Image
                     src={src}
                     alt={`YKK LB-WG buckle view ${i + 1}`}
@@ -252,23 +252,23 @@ export default function BucklesContent({ locale, position }: Props) {
                     </li>
                   </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mt-6">
+                <div className="grid grid-cols-2 gap-4 mt-6 max-w-[60%]">
                   {[
                     `${WP}2025/09/HP-M-50-BELT-BUCKLE-500x1024.png`,
                     `${WP}2025/09/HP-M-50-BELT-BUCKLE3-418x1024.png`,
                   ].map((src, i) => (
-                    <div key={i} className="overflow-hidden group bg-white p-3">
+                    <div key={i} className="overflow-hidden group">
                       <Image src={src} alt={`HP-M 50 view ${i + 1}`}
-                        width={300} height={500}
+                        width={180} height={300}
                         className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                        sizes="20vw"
+                        sizes="12vw"
                       />
                     </div>
                   ))}
                 </div>
               </div>
               {/* Right: large image */}
-              <div className="overflow-hidden group bg-white p-4">
+              <div className="overflow-hidden group">
                 <Image
                   src={`${WP}2025/09/HP-M-50-BELT-BUCKLE1.png`}
                   alt={isEn ? 'HP-M 50 belt buckle' : 'Klamra pasa HP-M 50'}
@@ -330,16 +330,16 @@ export default function BucklesContent({ locale, position }: Props) {
                     ))}
                   </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mt-6">
+                <div className="grid grid-cols-2 gap-4 mt-6 max-w-[60%]">
                   {[
                     `${WP}2025/09/LB25WGD-YKK-BELT-BUCKLE-T-POM2.png`,
                     `${WP}2025/09/LB25WGD-YKK-BELT-BUCKLE-T-POM1-e1756985500770-576x1024.png`,
                   ].map((src, i) => (
-                    <div key={i} className="overflow-hidden group bg-[#f5f3ef] p-3">
+                    <div key={i} className="overflow-hidden group">
                       <Image src={src} alt={`LB25WGD view ${i + 1}`}
-                        width={300} height={400}
+                        width={180} height={240}
                         className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                        sizes="20vw"
+                        sizes="12vw"
                       />
                     </div>
                   ))}
@@ -349,82 +349,69 @@ export default function BucklesContent({ locale, position }: Props) {
           </div>
         </section>
 
-        {/* ── QUICK-RELEASE BUCKLE FOR VEST ── */}
+        {/* ── 3-COLUMN: Quick-Release Vest | Standard Side Release | Self-locking ── */}
         <section className="py-16 bg-[#f5f3ef]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start">
+              {/* Col 1: Quick-Release Buckle for Vest */}
               <div>
-                <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111] tracking-wide uppercase">
-                  {isEn ? 'Quick-Release Buckle for Vest – Reinforced Plastic' : 'Klamra szybkiego otwierania do kamizelki – wzmocniony plastik'}
-                </h2>
+                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
+                  {isEn ? 'Quick-Release Buckle for Vest\nReinforced Plastic' : 'Klamra szybkiego otwierania do kamizelki – wzmocniony plastik'}
+                </h3>
+                <div className="overflow-hidden group flex justify-center mb-4">
+                  <Image
+                    src={`${WP}2025/09/KLAMRA-SZYBKIEGO-OTWIERANIA-DO-KAMIZELKI-450x1024.png`}
+                    alt={isEn ? 'Quick-release buckle for vest' : 'Klamra szybkiego otwierania do kamizelki'}
+                    width={220} height={500}
+                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    sizes="20vw"
+                  />
+                </div>
                 <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
                   {isEn
                     ? 'A buckle for use with 40mm wide webbing, designed for quick release by pulling a cord. Used for tactical vests / plate carriers, its special reinforced material ensures the buckle\u2019s excellent durability and high resistance to weather conditions (UV, water, snow, ice).'
                     : 'Klamra do zastosowania z taśmami o szerokości 40mm, zaprojektowana do szybkiego otwierania przez pociągnięcie sznurka. Stosowana w kamizelek taktycznych / nosidełkach płyt. Specjalny wzmocniony materiał zapewnia doskonałą trwałość i wysoką odporność na warunki atmosferyczne (UV, woda, śnieg, lód).'}
                 </p>
               </div>
-              <div className="overflow-hidden group bg-white p-4">
-                <Image
-                  src={`${WP}2025/09/KLAMRA-SZYBKIEGO-OTWIERANIA-DO-KAMIZELKI-450x1024.png`}
-                  alt={isEn ? 'Quick-release buckle for vest' : 'Klamra szybkiego otwierania do kamizelki'}
-                  width={400} height={700}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── STANDARD SIDE RELEASE BUCKLE ── */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-              <div className="overflow-hidden group bg-[#f5f3ef] p-4">
-                <Image
-                  src={`${WP}2025/09/STANDARD-SIDE-RELEASE-BUCKLE.png`}
-                  alt={isEn ? 'Standard side release buckle' : 'Standardowa klamra boczna'}
-                  width={700} height={500}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
+              {/* Col 2: Standard Side Release Buckle */}
               <div>
-                <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111] tracking-wide uppercase">
+                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
                   {isEn ? 'Standard Side Release Buckle' : 'Standardowa klamra boczna'}
-                </h2>
+                </h3>
+                <div className="overflow-hidden group flex justify-center mb-4">
+                  <Image
+                    src={`${WP}2025/09/STANDARD-SIDE-RELEASE-BUCKLE.png`}
+                    alt={isEn ? 'Standard side release buckle' : 'Standardowa klamra boczna'}
+                    width={280} height={280}
+                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    sizes="25vw"
+                  />
+                </div>
                 <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
                   {isEn
                     ? 'Standard buckles used in many applications are made from POM plastic, also known as acetal. This is a universal material that is often modified by manufacturers. Buckles made from other materials are produced when a special application is required, such as flame retardancy. We supply all plastic components in a flame-retardant version that meets the requirements of the UL-94 standard, class V0, as well as in a version with a reduced Near-Infrared (NIR) signature.'
                     : 'Standardowe klamry stosowane w wielu aplikacjach wykonane są z tworzywa POM, zwanego również acetalem. Jest to materiał uniwersalny, często modyfikowany przez producentów. Klamry z innych materiałów produkowane są wtedy, gdy wymagana jest specjalna aplikacja, jak np. trudnopalność. Dostarczamy wszystkie elementy plastikowe w wersji trudnopalnej spełniającej wymagania normy UL-94, klasa V0, a także w wersji z obniżoną sygnaturą NIR.'}
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SELF-LOCKING ADJUSTMENT BUCKLE ── */}
-        <section className="py-16 bg-[#f5f3ef]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+              {/* Col 3: Self-locking Adjustment Buckle */}
               <div>
-                <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111]">
+                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-wide text-center">
                   {isEn ? 'Self-locking Adjustment Buckle' : 'Klamra z samozaciskową regulacją'}
-                </h2>
+                </h3>
+                <div className="overflow-hidden group flex justify-center mb-4">
+                  <Image
+                    src={`${WP}2025/09/KLAMRA-Z-SAMOZACISKOWA-REGULACJA.png`}
+                    alt={isEn ? 'Self-locking adjustment buckle' : 'Klamra z samozaciskową regulacją'}
+                    width={280} height={280}
+                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    sizes="25vw"
+                  />
+                </div>
                 <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
                   {isEn
                     ? 'An incredibly convenient solution, allowing for very fast adjustment of the load-bearing strap\u2019s length thanks to its self-locking (cam) adjustment mechanism. It combines strong holding force with very user-friendly operation. Available in standard and NIR variants.'
                     : 'Niezwykle wygodne rozwiązanie, umożliwiające bardzo szybką regulację długości pasa nośnego dzięki samozaciskowemu mechanizmowi krzywkowemu. Łączy dużą siłę trzymania z bardzo przyjazną obsługą. Dostępna w wersjach standardowej i NIR.'}
                 </p>
-              </div>
-              <div className="overflow-hidden group bg-white p-4">
-                <Image
-                  src={`${WP}2025/09/KLAMRA-Z-SAMOZACISKOWA-REGULACJA.png`}
-                  alt={isEn ? 'Self-locking adjustment buckle' : 'Klamra z samozaciskową regulacją'}
-                  width={700} height={500}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
               </div>
             </div>
           </div>
@@ -467,8 +454,8 @@ export default function BucklesContent({ locale, position }: Props) {
                 </h2>
                 <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
                   {isEn
-                    ? 'A convenient buckle with a magnetic closure, used in many applications, including personal protective equipment and military uses. Easy to use with intuitive one-handed unfastening and fastening thanks to the magnet. Used in the new model of vests for the Polish Police.'
-                    : 'Wygodna klamra z magnetycznym zamknięciem, stosowana w wielu aplikacjach, w tym w środkach ochrony indywidualnej i zastosowaniach militarnych. Łatwa w obsłudze dzięki intuicyjnemu jednostronnemu odpinaniu i zapinaniu za pomocą magnesu. Zastosowana w nowym modelu kamizelek dla Polskiej Policji.'}
+                    ? <>A convenient buckle with a magnetic closure, used in many applications, including personal protective equipment and military uses. Easy to use with intuitive one-handed unfastening and fastening thanks to the magnet. Used in the new model of vests for the Polish Police &ndash; <a href="https://milmag.pl/holsters-hpe-poland-dostarczy-do-policji-kamizelki-plate-carrier/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#7a3f4a]">Holsters HPE Poland dostarczy do Policji kamizelki plate carrier – MILMAG</a>.</>
+                    : <>Wygodna klamra z magnetycznym zamknięciem, stosowana w wielu aplikacjach, w tym w środkach ochrony indywidualnej i zastosowaniach militarnych. Łatwa w obsłudze dzięki intuicyjnemu jednostronnemu odpinaniu i zapinaniu za pomocą magnesu. Zastosowana w nowym modelu kamizelek dla Polskiej Policji &ndash; <a href="https://milmag.pl/holsters-hpe-poland-dostarczy-do-policji-kamizelki-plate-carrier/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#7a3f4a]">Holsters HPE Poland dostarczy do Policji kamizelki plate carrier – MILMAG</a>.</>}
                 </p>
               </div>
               <div className="overflow-hidden group bg-white p-4">
@@ -522,16 +509,6 @@ export default function BucklesContent({ locale, position }: Props) {
         <FaqAccordion items={isEn ? FAQ_EN : FAQ_PL} locale={locale} />
       </section>
 
-      {/* Copyright */}
-      <section className="py-8 bg-[#f5f3ef]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-[Jost] text-xs text-gray-400 text-center leading-relaxed">
-            {isEn
-              ? '\u00a9 All rights reserved. Copying, processing, and distribution of materials without the author\u2019s consent is prohibited.'
-              : '\u00a9 Wszelkie prawa zastrzeżone. Kopiowanie, przetwarzanie i dystrybucja materiałów bez zgody autora jest zabroniona.'}
-          </p>
-        </div>
-      </section>
     </>
   );
 }

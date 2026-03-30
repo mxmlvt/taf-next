@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import SmoothAnchor from '@/components/ui/SmoothAnchor';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,7 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
 
-  const contactHref = locale === 'en' ? '/contact/' : '/pl/contact/';
 
   return (
     <div className="bg-[#f5f3ef] min-h-screen">
@@ -52,17 +52,17 @@ export default async function AboutPage({ params }: Props) {
               ? 'Professional distributor of YKK zippers and fasteners serving European manufacturers.'
               : 'Profesjonalny dystrybutor zamków YKK obsługujący europejskich producentów.'}
           </p>
-          <Link
-            href={contactHref}
+          <SmoothAnchor
+            href="#about-content"
             className="inline-block bg-white text-black font-[Jost] font-normal text-sm px-8 py-3 hover:bg-gray-100 transition-colors"
           >
-            {locale === 'en' ? 'Contact us' : 'Skontaktuj się'}
-          </Link>
+            {locale === 'en' ? 'Read more' : 'Czytaj więcej'}
+          </SmoothAnchor>
         </div>
       </div>
 
       {/* Main content — hardcoded from WP, two-column with TAF watermark */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <section id="about-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-[Jost] text-xs font-normal text-gray-500 uppercase tracking-widest mb-4">

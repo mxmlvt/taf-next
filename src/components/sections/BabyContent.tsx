@@ -127,7 +127,7 @@ export default function BabyContent({ locale, position }: Props) {
               <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-white">
                 {isEn ? 'Glow-in-the-Dark Zippers' : 'Zamki świecące w ciemności'}
               </h2>
-              <div className="space-y-4 font-[Jost] text-gray-300 text-sm leading-relaxed">
+              <div className="space-y-4 font-[Jost] text-white text-sm leading-relaxed">
                 <p>
                   {isEn
                     ? "Zipper elements injected with a special glow-in-the-dark material, perfect for children's clothing. Just shine a flashlight on the zipper for a moment, and the teeth will start to glow beautifully \u2013 kids love it!"

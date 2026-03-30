@@ -162,7 +162,7 @@ export default function FurnitureContent({ locale, position }: Props) {
               <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-white">
                 {isEn ? '5N Flexible Tape' : '5N Taśma elastyczna'}
               </h2>
-              <div className="space-y-4 font-[Jost] text-gray-300 text-sm leading-relaxed">
+              <div className="space-y-4 font-[Jost] text-white text-sm leading-relaxed">
                 <p>
                   {isEn
                     ? 'Zipper chain that allows for sewing on a curve, excellent for curved applications as well as in places where the construction requires vertical flexibility.'

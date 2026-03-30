@@ -36,7 +36,7 @@ export default async function ContactPage({ params }: Props) {
           sizes="100vw"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-[Jost] text-4xl sm:text-6xl font-light">
+          <h1 className="font-[Jost] text-4xl sm:text-6xl font-light text-white">
             {isEn ? 'Contact' : 'Kontakt'}
           </h1>
         </div>
@@ -85,9 +85,9 @@ export default async function ContactPage({ params }: Props) {
             <Image
               src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
               alt="TAF - Trims and Fasteners"
-              width={120}
-              height={48}
-              className="h-12 w-auto"
+              width={160}
+              height={40}
+              className="h-8 w-auto max-w-[160px] object-contain"
             />
             <div className="font-[Jost] text-sm text-gray-700 space-y-1">
               <p className="font-medium">EMKA Marta Kubicka</p>

@@ -352,18 +352,18 @@ export default function BucklesContent({ locale, position }: Props) {
         {/* ── 3-COLUMN: Quick-Release Vest | Standard Side Release | Self-locking ── */}
         <section className="py-16 bg-[#f5f3ef]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-start">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
               {/* Col 1: Quick-Release Buckle for Vest */}
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
-                  {isEn ? 'Quick-Release Buckle for Vest\nReinforced Plastic' : 'Klamra szybkiego otwierania do kamizelki – wzmocniony plastik'}
+                  {isEn ? <>Quick-Release Buckle for Vest<br />Reinforced Plastic</> : 'Klamra szybkiego otwierania do kamizelki – wzmocniony plastik'}
                 </h3>
-                <div className="overflow-hidden group flex justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
                   <Image
                     src={`${WP}2025/09/KLAMRA-SZYBKIEGO-OTWIERANIA-DO-KAMIZELKI-450x1024.png`}
                     alt={isEn ? 'Quick-release buckle for vest' : 'Klamra szybkiego otwierania do kamizelki'}
                     width={220} height={500}
-                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="20vw"
                   />
                 </div>
@@ -374,16 +374,16 @@ export default function BucklesContent({ locale, position }: Props) {
                 </p>
               </div>
               {/* Col 2: Standard Side Release Buckle */}
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
                   {isEn ? 'Standard Side Release Buckle' : 'Standardowa klamra boczna'}
                 </h3>
-                <div className="overflow-hidden group flex justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
                   <Image
                     src={`${WP}2025/09/STANDARD-SIDE-RELEASE-BUCKLE.png`}
                     alt={isEn ? 'Standard side release buckle' : 'Standardowa klamra boczna'}
                     width={280} height={280}
-                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="25vw"
                   />
                 </div>
@@ -394,16 +394,16 @@ export default function BucklesContent({ locale, position }: Props) {
                 </p>
               </div>
               {/* Col 3: Self-locking Adjustment Buckle */}
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-wide text-center">
                   {isEn ? 'Self-locking Adjustment Buckle' : 'Klamra z samozaciskową regulacją'}
                 </h3>
-                <div className="overflow-hidden group flex justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
                   <Image
                     src={`${WP}2025/09/KLAMRA-Z-SAMOZACISKOWA-REGULACJA.png`}
                     alt={isEn ? 'Self-locking adjustment buckle' : 'Klamra z samozaciskową regulacją'}
                     width={280} height={280}
-                    className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="25vw"
                   />
                 </div>
@@ -458,13 +458,13 @@ export default function BucklesContent({ locale, position }: Props) {
                     : <>Wygodna klamra z magnetycznym zamknięciem, stosowana w wielu aplikacjach, w tym w środkach ochrony indywidualnej i zastosowaniach militarnych. Łatwa w obsłudze dzięki intuicyjnemu jednostronnemu odpinaniu i zapinaniu za pomocą magnesu. Zastosowana w nowym modelu kamizelek dla Polskiej Policji &ndash; <a href="https://milmag.pl/holsters-hpe-poland-dostarczy-do-policji-kamizelki-plate-carrier/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#7a3f4a]">Holsters HPE Poland dostarczy do Policji kamizelki plate carrier – MILMAG</a>.</>}
                 </p>
               </div>
-              <div className="overflow-hidden group bg-white p-4">
+              <div className="overflow-hidden group flex justify-center">
                 <Image
                   src={`${WP}2025/09/klamramagnetyczna40mm-e1756986571379.png`}
                   alt={isEn ? '40mm magnetic buckle' : 'Klamra magnetyczna 40mm'}
-                  width={700} height={500}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  width={350} height={250}
+                  className="h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                  sizes="25vw"
                 />
               </div>
             </div>

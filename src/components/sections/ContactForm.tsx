@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 
 export default function ContactForm({ locale }: { locale: Locale }) {
   const t = useTranslations('contact');
@@ -20,46 +20,51 @@ export default function ContactForm({ locale }: { locale: Locale }) {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   // Honeypot – invisible to humans, bots fill it in
   const [honeypot, setHoneypot] = useState('');
-  const recaptchaLoaded = useRef(false);
+  const scriptLoaded = useRef(false);
 
+  // Load reCAPTCHA v3 script
   useEffect(() => {
-    if (!RECAPTCHA_SITE_KEY || recaptchaLoaded.current) return;
+    if (!SITE_KEY || scriptLoaded.current) return;
     const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+    script.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
     script.async = true;
     document.head.appendChild(script);
-    recaptchaLoaded.current = true;
+    scriptLoaded.current = true;
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Honeypot check – if filled, silently drop
+    // Honeypot check – if filled by a bot, silently discard
     if (honeypot) {
       setStatus('success');
       return;
     }
     setStatus('sending');
     try {
+      // Get reCAPTCHA v3 token
       let recaptchaToken = '';
-      if (RECAPTCHA_SITE_KEY && window.grecaptcha) {
+      if (SITE_KEY && window.grecaptcha) {
         recaptchaToken = await new Promise<string>((resolve) => {
           window.grecaptcha!.ready(async () => {
-            const token = await window.grecaptcha!.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
+            const token = await window.grecaptcha!.execute(SITE_KEY, { action: 'contact' });
             resolve(token);
           });
         });
       }
-      const res = await fetch('https://trimsandfasteners.com/wp-json/contact-form-7/v1/contact-forms/1647/feedback', {
+
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: new URLSearchParams({
-          'your-name': form.name,
-          'your-email': form.email,
-          'your-company': form.company,
-          'your-message': form.message,
-          '_wpcf7_locale': locale,
-          ...(recaptchaToken ? { '_recaptcha_response': recaptchaToken } : {}),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          message: form.message,
+          locale,
+          recaptchaToken,
         }),
       });
+
       setStatus(res.ok ? 'success' : 'error');
     } catch {
       setStatus('error');
@@ -96,6 +101,7 @@ export default function ContactForm({ locale }: { locale: Locale }) {
           autoComplete="off"
         />
       </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-xs font-medium text-gray-600 font-[Jost] mb-1">{t('name')} *</label>
@@ -140,13 +146,11 @@ export default function ContactForm({ locale }: { locale: Locale }) {
       {status === 'error' && (
         <p className="text-red-500 text-sm font-[Jost]">{t('error')}</p>
       )}
-      {RECAPTCHA_SITE_KEY && (
-        <p className="font-[Jost] text-xs text-gray-400">
-          {locale === 'en'
-            ? 'This site is protected by reCAPTCHA.'
-            : 'Ta strona jest chroniona przez reCAPTCHA.'}
-        </p>
-      )}
+      <p className="font-[Jost] text-xs text-gray-400">
+        {locale === 'en'
+          ? 'This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.'
+          : 'Ta strona jest chroniona przez reCAPTCHA. Obowiązuje Polityka prywatności i Warunki korzystania z usług Google.'}
+      </p>
       <button
         type="submit"
         disabled={status === 'sending'}

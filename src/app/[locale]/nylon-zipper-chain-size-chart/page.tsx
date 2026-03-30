@@ -189,7 +189,7 @@ export default async function SizeChartPage({ params }: Props) {
               <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-white">
                 8N WIS WRT
               </h2>
-              <div className="space-y-4 font-[Jost] text-gray-400 text-sm leading-relaxed">
+              <div className="space-y-4 font-[Jost] text-white text-sm leading-relaxed">
                 <p>
                   {isEn
                     ? '8N WIS WRT is a woven-in spiral special truly waterproof zipper (not water/gas-tight). The woven-in spiral structure makes it a great option for heavy army backpacks with superb water protection — the tape does not form a gap in the middle of the zipper where water can soak in, unlike standard WR zippers.'
@@ -201,11 +201,11 @@ export default async function SizeChartPage({ params }: Props) {
                     : 'Doskonała wydajność w mocno obciążonych produktach wojskowych dzięki płaskiemu elementowi spiralnemu — znacznie bardziej odporny na ścieranie, szczególnie na rogach mocno obciążonych produktów.'}
                 </p>
                 <div className="space-y-1 mt-4">
-                  <p className="font-medium text-gray-300">{isEn ? 'Available sizes:' : 'Dostępne rozmiary:'}</p>
-                  <p>N5 – 6mm spiral</p>
-                  <p>N8 – 7.8mm spiral</p>
+                  <p className="font-semibold text-white">{isEn ? 'Available sizes:' : 'Dostępne rozmiary:'}</p>
+                  <p className="text-gray-300">N5 – 6mm spiral</p>
+                  <p className="text-gray-300">N8 – 7.8mm spiral</p>
                 </div>
-                <p className="text-gray-500 text-xs mt-4">
+                <p className="text-gray-400 text-xs mt-4">
                   {isEn
                     ? 'Sliders available: non-lock, various puller styles, and standard military without puller.'
                     : 'Dostępne suwaki: nieblokujące, różne style uchwytów i standardowe militarne bez uchwytu.'}

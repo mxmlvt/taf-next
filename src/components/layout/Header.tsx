@@ -316,7 +316,7 @@ export default function Header({ menu, translations }: HeaderProps) {
       {openDropdown === 'type' && (
         <div
           className="absolute top-full z-50 flex bg-white"
-          style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1000px' }}
+          style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1300px' }}
           onMouseLeave={() => setOpenDropdown(null)}
         >
           <div className="py-8 flex-1">
@@ -345,13 +345,13 @@ export default function Header({ menu, translations }: HeaderProps) {
               </div>
             ))}
           </div>
-          <div className="flex-shrink-0 relative overflow-hidden bg-gray-100 self-stretch" style={{ width: '620px' }}>
+          <div className="flex-shrink-0 relative overflow-hidden bg-gray-100 self-stretch" style={{ width: '800px' }}>
             <Image
               src={typeItems[hoveredTypeCat]?.img || typeItems[0].img}
               alt={typeItems[hoveredTypeCat]?.label || ''}
               fill
               className="object-cover transition-all duration-300"
-              sizes="620px"
+              sizes="800px"
             />
           </div>
         </div>
@@ -361,7 +361,7 @@ export default function Header({ menu, translations }: HeaderProps) {
       {openDropdown === 'use' && (
         <div
           className="absolute top-full z-50 flex bg-white"
-          style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1000px' }}
+          style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1300px' }}
           onMouseLeave={() => setOpenDropdown(null)}
         >
           <div className="py-4 flex-1">
@@ -379,13 +379,13 @@ export default function Header({ menu, translations }: HeaderProps) {
               </Link>
             ))}
           </div>
-          <div className="flex-shrink-0 relative overflow-hidden bg-gray-100 self-stretch" style={{ width: '620px' }}>
+          <div className="flex-shrink-0 relative overflow-hidden bg-gray-100 self-stretch" style={{ width: '800px' }}>
             <Image
               src={useCats[hoveredUseCat]?.img || useCats[0].img}
               alt={useCats[hoveredUseCat]?.label || ''}
               fill
               className="object-cover transition-all duration-300"
-              sizes="620px"
+              sizes="800px"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
             <div className="absolute bottom-4 left-4 right-4">

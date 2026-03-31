@@ -210,7 +210,7 @@ export default function NylonZippersContent({ locale, position }: Props) {
       </section>
 
       {/* ── Military / PPE ── */}
-      <section className="py-24 bg-[#111111]">
+      <section className="py-32 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <FadeIn direction="right" className="relative overflow-hidden group">
@@ -245,7 +245,7 @@ export default function NylonZippersContent({ locale, position }: Props) {
       </section>
 
       {/* ── Sportswear / Cycling ── */}
-      <section className="py-16 bg-[#f5f3ef]">
+      <section className="py-24 bg-[#f5f3ef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-stretch">
             <div className="flex flex-col">
@@ -259,7 +259,7 @@ export default function NylonZippersContent({ locale, position }: Props) {
                     : 'Mamy długie doświadczenie w dostarczaniu różnego rodzaju zamków błyskawicznych dla producentów odzieży kolarskiej. Doskonale znamy tę branżę i możemy zaoferować zarówno innowacyjne rozwiązania, jak i najlepsze oferty na standardowe zamki.'}
                 </p>
               </div>
-              <div className="relative overflow-hidden group h-[240px]">
+              <div className="relative overflow-hidden group h-[320px]">
                 <Image
                   src={`${WP}2025/06/sport-garment-zipper--1024x576.jpeg`}
                   alt={isEn ? 'Sportswear zipper application' : 'Zamek w odzieży sportowej'}

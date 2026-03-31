@@ -20,7 +20,14 @@ export default function ZipperCard({ zipper }: ZipperCardProps) {
     if (!detailsCache.has(zipper.id)) {
       fetch(`/api/zipper/${zipper.id}`)
         .then(r => r.json())
-        .then(d => detailsCache.set(zipper.id, d))
+        .then(d => {
+          detailsCache.set(zipper.id, d);
+          // Preload product image so it's ready when modal opens
+          if (d?.thumbnailUrl) {
+            const img = new window.Image();
+            img.src = d.thumbnailUrl;
+          }
+        })
         .catch(() => {});
     }
   };

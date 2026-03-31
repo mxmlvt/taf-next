@@ -365,12 +365,12 @@ export default function Header({ menu, translations }: HeaderProps) {
           style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1300px' }}
           onMouseLeave={() => setOpenDropdown(null)}
         >
-          <div className="py-5 flex-1">
+          <div className="py-10 flex-1">
             {useCats.map((cat, i) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className={`block px-6 py-4 text-sm font-[Jost] transition-colors ${
+                className={`block px-6 py-6 text-sm font-[Jost] transition-colors ${
                   hoveredUseCat === i ? 'text-black bg-gray-50' : 'text-gray-600 hover:text-black hover:bg-gray-50'
                 }`}
                 onMouseEnter={() => setHoveredUseCat(i)}

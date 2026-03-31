@@ -82,6 +82,7 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
                   src={data.thumbnailUrl}
                   alt={data.thumbnailAlt || data.name}
                   fill
+                  priority
                   className="object-contain p-4"
                   sizes="(max-width: 640px) 100vw, 45vw"
                 />

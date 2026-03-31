@@ -162,7 +162,7 @@ export default async function CategoryPage({ params }: Props) {
       {enSlug === 'furniture' && <FurnitureContent locale={locale} position="above" />}
       {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="above" />}
 
-      {/* Our products — split into blocks of 12, "below" content interleaved after block 0 */}
+      {/* Our products — all blocks first, then "below" content (which ends with FAQ) */}
       {zippers.length > 0 && Array.from({ length: Math.ceil(zippers.length / 12) }, (_, i) => (
         <React.Fragment key={i}>
           <section className="bg-[#f5f3ef] py-16">
@@ -180,32 +180,17 @@ export default async function CategoryPage({ params }: Props) {
               <ZipperGrid zippers={zippers.slice(i * 12, i * 12 + 12)} />
             </div>
           </section>
-          {i === 0 && (
-            <>
-              {enSlug === 'fire-protection' && <FireProtectionContent locale={locale} position="below" />}
-              {enSlug === 'military' && <MilitaryContent locale={locale} position="below" />}
-              {enSlug === 'cycling-sportswear' && <CyclingSportswearContent locale={locale} position="below" />}
-              {enSlug === 'baby' && <BabyContent locale={locale} position="below" />}
-              {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
-              {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
-              {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
-            </>
-          )}
         </React.Fragment>
       ))}
 
-      {/* "below" content fallback when there are no products */}
-      {zippers.length === 0 && (
-        <>
-          {enSlug === 'fire-protection' && <FireProtectionContent locale={locale} position="below" />}
-          {enSlug === 'military' && <MilitaryContent locale={locale} position="below" />}
-          {enSlug === 'cycling-sportswear' && <CyclingSportswearContent locale={locale} position="below" />}
-          {enSlug === 'baby' && <BabyContent locale={locale} position="below" />}
-          {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
-          {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
-          {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
-        </>
-      )}
+      {/* "below" content (content sections + FAQ) — always after all products */}
+      {enSlug === 'fire-protection' && <FireProtectionContent locale={locale} position="below" />}
+      {enSlug === 'military' && <MilitaryContent locale={locale} position="below" />}
+      {enSlug === 'cycling-sportswear' && <CyclingSportswearContent locale={locale} position="below" />}
+      {enSlug === 'baby' && <BabyContent locale={locale} position="below" />}
+      {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
+      {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
+      {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
 
     </div>
   );

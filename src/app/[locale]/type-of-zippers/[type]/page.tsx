@@ -162,7 +162,7 @@ export default async function TypePage({ params }: Props) {
       {enSlug === 'nylon-zippers' && <NylonZippersContent locale={locale} position="above" />}
       {enSlug === 'metal-zippers' && <MetalZippersContent locale={locale} position="above" />}
 
-      {/* Product grid — split into blocks of 12, "below" content interleaved after block 0 */}
+      {/* Product grid — all blocks first, then "below" content (which ends with FAQ) */}
       {zippers.length > 0 && Array.from({ length: Math.ceil(zippers.length / 12) }, (_, i) => (
         <React.Fragment key={i}>
           <section className="bg-[#f5f3ef] py-16">
@@ -180,15 +180,13 @@ export default async function TypePage({ params }: Props) {
               <ZipperGrid zippers={zippers.slice(i * 12, i * 12 + 12)} />
             </div>
           </section>
-          {i === 0 && (
-            <>
-              {enSlug === 'plastic-zippers' && <PlasticZippersContent locale={locale} position="below" />}
-              {enSlug === 'nylon-zippers' && <NylonZippersContent locale={locale} position="below" />}
-              {enSlug === 'metal-zippers' && <MetalZippersContent locale={locale} position="below" />}
-            </>
-          )}
         </React.Fragment>
       ))}
+
+      {/* "below" content (content sections + FAQ) — always after all products */}
+      {enSlug === 'plastic-zippers' && <PlasticZippersContent locale={locale} position="below" />}
+      {enSlug === 'nylon-zippers' && <NylonZippersContent locale={locale} position="below" />}
+      {enSlug === 'metal-zippers' && <MetalZippersContent locale={locale} position="below" />}
 
     </div>
   );

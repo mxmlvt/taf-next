@@ -132,14 +132,14 @@ export default function MilitaryContent({ locale, position }: Props) {
                       : 'Dostarczamy zamki najwyższej jakości zapewniające dodatkową wytrzymałość w sprzęcie specjalistycznym pracującym w trudnych warunkach. Jesteśmy bardzo selektywni w wyborze dostawców — współpracujemy wyłącznie z fabrykami wytwarzającymi kluczowe komponenty zamków we własnym zakresie.'}
                   </p>
                 </div>
-                <div className="overflow-hidden group">
+                <div className="overflow-hidden group max-w-[70%]">
                   <Image
                     src={`${WP}2025/06/militarnyzamekplastikowy3-1024x576.jpg`}
                     alt={isEn ? 'Military plastic zipper close-up' : 'Zamek plastikowy militarny zbliżenie'}
                     width={600}
                     height={400}
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 70vw, 35vw"
                   />
                 </div>
               </div>

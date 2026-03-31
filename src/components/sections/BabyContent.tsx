@@ -120,20 +120,20 @@ export default function BabyContent({ locale, position }: Props) {
       </section>
 
       {/* ── Glow-in-the-Dark ── */}
-      <section className="py-16 bg-[#111111]">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div>
-              <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-white">
+              <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-6 text-[#111]">
                 {isEn ? 'Glow-in-the-Dark Zippers' : 'Zamki świecące w ciemności'}
               </h2>
-              <div className="space-y-4 font-[Jost] text-white text-sm leading-relaxed">
+              <div className="space-y-4 font-[Jost] text-gray-500 text-sm leading-relaxed">
                 <p>
                   {isEn
                     ? "Zipper elements injected with a special glow-in-the-dark material, perfect for children's clothing. Just shine a flashlight on the zipper for a moment, and the teeth will start to glow beautifully \u2013 kids love it!"
                     : 'Elementy zamka wtryskiwane ze specjalnego materiału świecącego w ciemnościach, idealne do odzieży dziecięcej. Wystarczy na chwilę oświetlić zamek latarką, a ząbki zaczną ładnie świecić \u2013 dzieci to uwielbiają!'}
                 </p>
-                <h3 className="font-[Jost] text-base font-medium text-white mt-4">
+                <h3 className="font-[Jost] text-base font-medium text-[#111] mt-4">
                   {isEn
                     ? 'How does the magic work? The technology of photoluminescence.'
                     : 'Jak działa magia? Technologia fotoluminescencji.'}

@@ -286,7 +286,7 @@ export default function BucklesContent({ locale, position }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
               {/* Left: large image */}
-              <div className="overflow-hidden group bg-[#f5f3ef] p-4">
+              <div className="overflow-hidden group bg-[#f5f3ef]">
                 <Image
                   src={`${WP}2025/09/LB25WGD-YKK-BELT-BUCKLE-T-POM.png`}
                   alt={isEn ? 'LB25WGD YKK belt buckle T-POM' : 'Klamra YKK LB25WGD T-POM'}
@@ -355,10 +355,10 @@ export default function BucklesContent({ locale, position }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
               {/* Col 1: Quick-Release Buckle for Vest */}
               <div className="flex flex-col">
-                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
+                <h3 className="font-[Jost] text-sm font-semibold mb-9 text-[#111] tracking-widest uppercase text-center">
                   {isEn ? <>Quick-Release Buckle for Vest<br />Reinforced Plastic</> : 'Klamra szybkiego otwierania do kamizelki – wzmocniony plastik'}
                 </h3>
-                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-9">
                   <Image
                     src={`${WP}2025/09/KLAMRA-SZYBKIEGO-OTWIERANIA-DO-KAMIZELKI-450x1024.png`}
                     alt={isEn ? 'Quick-release buckle for vest' : 'Klamra szybkiego otwierania do kamizelki'}
@@ -375,10 +375,10 @@ export default function BucklesContent({ locale, position }: Props) {
               </div>
               {/* Col 2: Standard Side Release Buckle */}
               <div className="flex flex-col">
-                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-widest uppercase text-center">
+                <h3 className="font-[Jost] text-sm font-semibold mb-9 text-[#111] tracking-widest uppercase text-center">
                   {isEn ? 'Standard Side Release Buckle' : 'Standardowa klamra boczna'}
                 </h3>
-                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-9">
                   <Image
                     src={`${WP}2025/09/STANDARD-SIDE-RELEASE-BUCKLE.png`}
                     alt={isEn ? 'Standard side release buckle' : 'Standardowa klamra boczna'}
@@ -395,10 +395,10 @@ export default function BucklesContent({ locale, position }: Props) {
               </div>
               {/* Col 3: Self-locking Adjustment Buckle */}
               <div className="flex flex-col">
-                <h3 className="font-[Jost] text-sm font-semibold mb-4 text-[#111] tracking-wide text-center">
+                <h3 className="font-[Jost] text-sm font-semibold mb-9 text-[#111] tracking-wide text-center">
                   {isEn ? 'Self-locking Adjustment Buckle' : 'Klamra z samozaciskową regulacją'}
                 </h3>
-                <div className="h-72 overflow-hidden group flex items-center justify-center mb-4">
+                <div className="h-72 overflow-hidden group flex items-center justify-center mb-9">
                   <Image
                     src={`${WP}2025/09/KLAMRA-Z-SAMOZACISKOWA-REGULACJA.png`}
                     alt={isEn ? 'Self-locking adjustment buckle' : 'Klamra z samozaciskową regulacją'}

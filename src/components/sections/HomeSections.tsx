@@ -8,21 +8,21 @@ interface HomeSectionsProps {
 }
 
 const BLOG_POSTS_EN = [
-  { slug: 'zippers-for-bags-and-backpacks', title: 'Zippers for Bags and Backpacks', excerpt: 'Choosing the right zipper for bags and backpacks is crucial for their functionality and durability, given their frequent use and potential loads.', date: '2025-07-02', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg' },
-  { slug: 'where-to-buy-zippers-wholesale', title: 'Where to buy zippers wholesale?', excerpt: 'We at Trims and fasteners understand that buying zippers wholesale requires a precise understanding of your needs and a trustworthy partner.', date: '2025-06-27', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
-  { slug: 'coil-zippers-characteristics-and-subtypes', title: 'Coil Zippers: Characteristics and Subtypes', excerpt: 'Coil zippers, widely used for their flexibility and versatility, have specific features and subtypes that affect their application.', date: '2025-06-27', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
-  { slug: 'zippers-comparison-metal-plastic-and-nylon', title: 'Zippers Comparison: Metal, Plastic, and Nylon', excerpt: 'The zipper\'s mechanism is a relatively simple concept, yet it\'s a complex component because its performance depends on the material it\'s made from.', date: '2025-06-20', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg' },
-  { slug: 'how-to-fix-zipper-problems', title: 'How to Fix Zipper Problems?', excerpt: 'There\'s nothing more frustrating than a zipper that stops working at the worst possible moment. Whether it\'s on a jacket, backpack, or a case.', date: '2025-05-23', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg' },
-  { slug: 'how-to-recognize-a-high-quality-zipper', title: 'How to recognize a high-quality zipper?', excerpt: 'A zipper is one of those components that can either make a product feel amazing or completely ruin the experience. While most of us don\'t think about zippers every day, they are often the first thing that determines quality.', date: '2025-05-14', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
+  { slug: 'zippers-for-bags-and-backpacks', title: 'Zippers for Bags and Backpacks', excerpt: 'Choosing the right zipper for bags and backpacks is crucial for their functionality and durability, given their frequent use and potential loads.', date: '2025-07-02', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg' },
+  { slug: 'where-to-buy-zippers-wholesale', title: 'Where to buy zippers wholesale?', excerpt: 'We at Trims and fasteners understand that buying zippers wholesale requires a precise understanding of your needs and a trustworthy partner.', date: '2025-06-27', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
+  { slug: 'coil-zippers-characteristics-and-subtypes', title: 'Coil Zippers: Characteristics and Subtypes', excerpt: 'Coil zippers, widely used for their flexibility and versatility, have specific features and subtypes that affect their application.', date: '2025-06-27', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
+  { slug: 'zippers-comparison-metal-plastic-and-nylon', title: 'Zippers Comparison: Metal, Plastic, and Nylon', excerpt: 'The zipper\'s mechanism is a relatively simple concept, yet it\'s a complex component because its performance depends on the material it\'s made from.', date: '2025-06-20', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg' },
+  { slug: 'how-to-fix-zipper-problems', title: 'How to Fix Zipper Problems?', excerpt: 'There\'s nothing more frustrating than a zipper that stops working at the worst possible moment. Whether it\'s on a jacket, backpack, or a case.', date: '2025-05-23', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg' },
+  { slug: 'how-to-recognize-a-high-quality-zipper', title: 'How to recognize a high-quality zipper?', excerpt: 'A zipper is one of those components that can either make a product feel amazing or completely ruin the experience. While most of us don\'t think about zippers every day, they are often the first thing that determines quality.', date: '2025-05-14', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
 ];
 
 const BLOG_POSTS_PL = [
-  { slug: 'zamki-blyskawiczne-do-toreb-i-plecakow', title: 'Zamki błyskawiczne do toreb i plecaków', excerpt: 'Wybór odpowiedniego zamka do toreb i plecaków jest kluczowy dla ich funkcjonalności i trwałości, biorąc pod uwagę częste użytkowanie.', date: '2025-07-02', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg' },
-  { slug: 'gdzie-kupic-zamki-blyskawiczne-hurtem', title: 'Gdzie Kupić Zamki Błyskawiczne Hurtem?', excerpt: 'W TAF rozumiemy, że zakup hurtowy zamków błyskawicznych wymaga precyzyjnego określenia potrzeb i zaufanego partnera.', date: '2025-06-27', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
-  { slug: 'zamki-spiralne-charakterystyka-i-podtypy', title: 'Zamki Spiralne: Charakterystyka i Podtypy', excerpt: 'Zamki spiralne, powszechnie stosowane ze względu na ich elastyczność i wszechstronność, posiadają specyficzne cechy i podtypy wpływające na zastosowanie.', date: '2025-06-27', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
-  { slug: 'porownanie-zamkow-blyskawicznych-metalowe-plastikowe-i-nylonowe', title: 'Porównanie Zamków Błyskawicznych: Metalowe, Plastikowe i Nylonowe', excerpt: 'Z założenia dosyć prosty mechanizm zamka błyskawicznego jest komponentem złożonym, zależnym od materiału z którego został wykonany.', date: '2025-06-20', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg' },
-  { slug: 'jak-rozwiazac-problemy-z-zamkiem-blyskawicznym', title: 'Jak rozwiązać problemy z zamkiem błyskawicznym?', excerpt: 'Nie ma nic bardziej irytującego niż zamek błyskawiczny, który odmawia współpracy w najmniej odpowiednim momencie.', date: '2025-05-23', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg' },
-  { slug: 'zamek-wysokiej-jakosci', title: 'Jak poznać zamek błyskawiczny wysokiej jakości?', excerpt: 'Zamek błyskawiczny to jeden z tych elementów, które albo zachwycają, albo całkowicie psują wrażenie z użytkowania produktu. Poznaj cechy zamka premium.', date: '2025-05-14', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
+  { slug: 'zamki-blyskawiczne-do-toreb-i-plecakow', title: 'Zamki błyskawiczne do toreb i plecaków', excerpt: 'Wybór odpowiedniego zamka do toreb i plecaków jest kluczowy dla ich funkcjonalności i trwałości, biorąc pod uwagę częste użytkowanie.', date: '2025-07-02', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg' },
+  { slug: 'gdzie-kupic-zamki-blyskawiczne-hurtem', title: 'Gdzie Kupić Zamki Błyskawiczne Hurtem?', excerpt: 'W TAF rozumiemy, że zakup hurtowy zamków błyskawicznych wymaga precyzyjnego określenia potrzeb i zaufanego partnera.', date: '2025-06-27', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
+  { slug: 'zamki-spiralne-charakterystyka-i-podtypy', title: 'Zamki Spiralne: Charakterystyka i Podtypy', excerpt: 'Zamki spiralne, powszechnie stosowane ze względu na ich elastyczność i wszechstronność, posiadają specyficzne cechy i podtypy wpływające na zastosowanie.', date: '2025-06-27', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
+  { slug: 'porownanie-zamkow-blyskawicznych-metalowe-plastikowe-i-nylonowe', title: 'Porównanie Zamków Błyskawicznych: Metalowe, Plastikowe i Nylonowe', excerpt: 'Z założenia dosyć prosty mechanizm zamka błyskawicznego jest komponentem złożonym, zależnym od materiału z którego został wykonany.', date: '2025-06-20', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg' },
+  { slug: 'jak-rozwiazac-problemy-z-zamkiem-blyskawicznym', title: 'Jak rozwiązać problemy z zamkiem błyskawicznym?', excerpt: 'Nie ma nic bardziej irytującego niż zamek błyskawiczny, który odmawia współpracy w najmniej odpowiednim momencie.', date: '2025-05-23', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg' },
+  { slug: 'zamek-wysokiej-jakosci', title: 'Jak poznać zamek błyskawiczny wysokiej jakości?', excerpt: 'Zamek błyskawiczny to jeden z tych elementów, które albo zachwycają, albo całkowicie psują wrażenie z użytkowania produktu. Poznaj cechy zamka premium.', date: '2025-05-14', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg' },
 ];
 
 export default function HomeSections({ locale }: HomeSectionsProps) {
@@ -34,28 +34,28 @@ export default function HomeSections({ locale }: HomeSectionsProps) {
   const typeCategories = [
     {
       label: isEn ? 'Plastic Zippers' : 'Zamki plastikowe',
-      img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
+      img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
       href: isEn ? `${base}/type-of-zippers/plastic-zippers/` : '/pl/type-of-zippers/plastic-zippers/',
     },
     {
       label: isEn ? 'Nylon Zippers' : 'Zamki nylonowe',
-      img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
+      img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
       href: isEn ? `${base}/type-of-zippers/nylon-zippers/` : '/pl/type-of-zippers/nylon-zippers/',
     },
     {
       label: isEn ? 'Metal Zippers' : 'Zamki metalowe',
-      img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
+      img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
       href: isEn ? `${base}/type-of-zippers/metal-zippers/` : '/pl/type-of-zippers/metal-zippers/',
     },
   ];
 
   const usageCategories = [
-    { slug: 'fire-protection', label: isEn ? 'Fire-Resistant Clothing' : 'Odzież ognioodporna', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png', href: `${base}/use-of-zippers/fire-protection/` },
-    { slug: 'military', label: isEn ? 'Military' : 'Wojsko', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png', href: `${base}/use-of-zippers/military/` },
-    { slug: 'cycling-sportswear', label: isEn ? 'Cycling & Sportswear' : 'Kolarstwo & odzież sportowa', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png', href: `${base}/use-of-zippers/cycling-sportswear/` },
-    { slug: 'baby', label: isEn ? 'Baby' : 'Dzieci', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png', href: `${base}/use-of-zippers/baby/` },
-    { slug: 'fashion', label: isEn ? 'Fashion' : 'Moda', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png', href: `${base}/use-of-zippers/fashion/` },
-    { slug: 'buckles-plastic-hardware', label: isEn ? 'Buckles & Plastic Hardware' : 'Zapięcia & elementy plastikowe', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png', href: `${base}/use-of-zippers/buckles-plastic-hardware/` },
+    { slug: 'fire-protection', label: isEn ? 'Fire-Resistant Clothing' : 'Odzież ognioodporna', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png', href: `${base}/use-of-zippers/fire-protection/` },
+    { slug: 'military', label: isEn ? 'Military' : 'Wojsko', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png', href: `${base}/use-of-zippers/military/` },
+    { slug: 'cycling-sportswear', label: isEn ? 'Cycling & Sportswear' : 'Kolarstwo & odzież sportowa', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png', href: `${base}/use-of-zippers/cycling-sportswear/` },
+    { slug: 'baby', label: isEn ? 'Baby' : 'Dzieci', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png', href: `${base}/use-of-zippers/baby/` },
+    { slug: 'fashion', label: isEn ? 'Fashion' : 'Moda', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png', href: `${base}/use-of-zippers/fashion/` },
+    { slug: 'buckles-plastic-hardware', label: isEn ? 'Buckles & Plastic Hardware' : 'Zapięcia & elementy plastikowe', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png', href: `${base}/use-of-zippers/buckles-plastic-hardware/` },
   ];
 
   return (
@@ -259,7 +259,7 @@ export default function HomeSections({ locale }: HomeSectionsProps) {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
                 alt={isEn ? 'TAF - Trims and Fasteners' : 'TAF - Zamki i dodatki'}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"

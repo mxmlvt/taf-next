@@ -30,7 +30,7 @@ export default async function ContactPage({ params }: Props) {
       {/* Dark hero with zipper background image */}
       <div className="relative bg-[#111111] text-white py-24 overflow-hidden">
         <Image
-          src="https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
+          src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
           alt=""
           fill
           className="object-cover opacity-40"
@@ -85,7 +85,7 @@ export default async function ContactPage({ params }: Props) {
           {/* Right: TAF logo + address block */}
           <div className="flex flex-col gap-6">
             <Image
-              src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
+              src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
               alt="TAF - Trims and Fasteners"
               width={160}
               height={40}

@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: Props) {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src="https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
+            src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
             alt=""
             fill
             className="object-cover"

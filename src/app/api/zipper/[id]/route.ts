@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cleanZipperName } from '@/lib/utils';
 
-const WP_API = 'https://trimsandfasteners.com/wp-json';
+const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
 
 export async function GET(
   _req: NextRequest,

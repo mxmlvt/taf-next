@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const WP = 'https://trimsandfasteners.com/wp-content/uploads/2025/10/';
+const WP = 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/10/';
 
 type Props = { params: Promise<{ locale: string }> };
 

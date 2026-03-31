@@ -15,7 +15,7 @@ const SPECS_EN: ZipperSpec[] = [
   {
     id: '5cc-zipper',
     title: '5CC (5mm) Zipper',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/07/zamek5cc.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/07/zamek5cc.png',
     description: 'The teeth are about 5 mm wide, and the tape is approximately 1.25 inches. This is a medium-weight zipper that offers high durability.',
     applicationsLabel: 'Typical applications:',
     applications: [
@@ -27,7 +27,7 @@ const SPECS_EN: ZipperSpec[] = [
   {
     id: '45ech-zipper',
     title: '45ECH (4.5mm) Zipper',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/07/zamek4ech.jpg',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/07/zamek4ech.jpg',
     description: 'The teeth are approximately 4.5 mm wide, and the tape is also about 1.25 inches. It is considered slightly lighter and finer than a #5 zipper.',
     applicationsLabel: 'Typical applications:',
     applications: [
@@ -42,7 +42,7 @@ const SPECS_PL: ZipperSpec[] = [
   {
     id: '5cc-zipper',
     title: 'Zamek YKK 5CC',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/07/zamek5cc.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/07/zamek5cc.png',
     description: 'Jest to zamek z grubą spiralą, oferujący największą wytrzymałość wśród zamków krytych oraz największą siłę zapięcia. Używany w meblach tapicerowanych.',
     applicationsLabel: 'Typowe zastosowania:',
     applications: [
@@ -54,7 +54,7 @@ const SPECS_PL: ZipperSpec[] = [
   {
     id: '45ech-zipper',
     title: 'Zamek YKK 45ECH',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/07/zamek4ech.jpg',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/07/zamek4ech.jpg',
     description: 'Zamek kryty 45ECH różni się od zamka 5CC większą elastycznością. Płaski profil spirali pozwala na pracę w miejscach, gdzie zastosowanie 5CC nie byłoby możliwe.',
     applicationsLabel: 'Typowe zastosowania:',
     applications: [

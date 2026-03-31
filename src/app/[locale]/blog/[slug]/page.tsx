@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
   // Use custom headings for custom posts, WP-extracted ones otherwise
   const headings = hasCustomBody ? customHeadings : wpHeadings;
 
-  const FALLBACK_IMG = 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg';
+  const FALLBACK_IMG = 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg';
   const heroImg = featuredImage?.source_url || FALLBACK_IMG;
 
   const articleJsonLd = {
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'TAF - Trims and Fasteners',
-      logo: { '@type': 'ImageObject', url: 'https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png' },
+      logo: { '@type': 'ImageObject', url: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png' },
     },
     description: post.excerpt?.rendered?.replace(/<[^>]*>/g, '').trim().slice(0, 160),
   };

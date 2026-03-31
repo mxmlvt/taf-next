@@ -15,8 +15,8 @@ interface HeroProps {
 }
 
 const DEFAULT_SLIDES = [
-  'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg',
-  'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider2-scaled.jpg',
+  'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg',
+  'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider2-scaled.jpg',
 ];
 
 export default function Hero({ slides = DEFAULT_SLIDES, title, subtitle, description, ctaUrl }: HeroProps) {

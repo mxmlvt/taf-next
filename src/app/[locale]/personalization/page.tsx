@@ -35,7 +35,7 @@ export default async function PersonalizationPage({ params }: Props) {
       {/* Dark hero */}
       <div className="subpage-hero relative bg-[#111111] text-white min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://trimsandfasteners.com/wp-content/uploads/2025/07/logo-WR-1-scaled.png"
+          src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/07/logo-WR-1-scaled.png"
           alt=""
           fill
           className="object-cover opacity-40"

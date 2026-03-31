@@ -16,7 +16,7 @@ import SmoothAnchor from '@/components/ui/SmoothAnchor';
 const TYPE_SLUGS: Record<string, { wpSlugEn: string; wpSlugPl: string; labelEn: string; labelPl: string; heroImg: string; subtitleEn: string; subtitlePl: string; seoTitleEn: string; seoDescEn: string; seoTitlePl: string; seoDescPl: string }> = {
   'nylon-zippers': {
     wpSlugEn: 'nylon-zippers', wpSlugPl: 'zamki-nylonowe', labelEn: 'Nylon Zippers', labelPl: 'Zamki nylonowe',
-    heroImg: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
+    heroImg: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
     subtitleEn: 'Flexible and durable', subtitlePl: 'Elastyczne i trwałe',
     seoTitleEn: 'Nylon Coil Zippers | Water-Resistant & Concealed Zippers | TAF',
     seoDescEn: 'High-quality nylon coil zippers for sportswear, cycling apparel, and outdoor gear. Water-resistant, concealed, and invisible zipper options. Maximum flexibility and durability.',
@@ -25,7 +25,7 @@ const TYPE_SLUGS: Record<string, { wpSlugEn: string; wpSlugPl: string; labelEn: 
   },
   'plastic-zippers': {
     wpSlugEn: 'plastic-zippers', wpSlugPl: 'zamki-plastikowe', labelEn: 'Plastic Zippers', labelPl: 'Zamki plastikowe',
-    heroImg: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
+    heroImg: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
     subtitleEn: 'Tailored to your needs', subtitlePl: 'Dopasowane do Twoich potrzeb',
     seoTitleEn: 'Plastic Zippers | Waterproof & Flame Retardant | TAF',
     seoDescEn: 'Premium plastic molded zippers (Delrin) for outdoor, military, and children\'s clothing. Waterproof, flame-retardant, glow-in-the-dark options. UV-resistant for marine use.',
@@ -34,7 +34,7 @@ const TYPE_SLUGS: Record<string, { wpSlugEn: string; wpSlugPl: string; labelEn: 
   },
   'metal-zippers': {
     wpSlugEn: 'metal-zippers', wpSlugPl: 'zamki-metalowe', labelEn: 'Metal Zippers', labelPl: 'Zamki metalowe',
-    heroImg: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
+    heroImg: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
     subtitleEn: 'Highest quality, durability, and aesthetics', subtitlePl: 'Najwyższa jakość, trwałość i estetyka',
     seoTitleEn: 'Metal Zippers | Brass, Aluminum & Stainless Steel | TAF',
     seoDescEn: 'Premium metal zippers: brass, aluminum, and stainless steel teeth. Polished and antique finishes for fashion, workwear, and footwear. Industrial-grade durability.',

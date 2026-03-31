@@ -31,8 +31,8 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
 
   const HERO_SLIDES = [
-    'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg',
-    'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider2-scaled.jpg',
+    'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg',
+    'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider2-scaled.jpg',
   ];
 
   return (

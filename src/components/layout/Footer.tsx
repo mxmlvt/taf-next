@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <div className="bg-white rounded p-2 w-28 h-28 flex items-center justify-center">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
                 alt="TAF QR Code"
                 width={96}
                 height={96}
@@ -119,7 +119,7 @@ export default function Footer() {
         <div className="flex justify-center py-6 border-t border-gray-800">
           <Link href={locale === 'en' ? '/' : '/pl/'}>
             <Image
-              src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
+              src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
               alt="TAF - Trims and Fasteners"
               width={80}
               height={32}

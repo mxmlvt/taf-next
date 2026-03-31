@@ -2,7 +2,7 @@ import Image from 'next/image';
 import FadeIn from '@/components/ui/FadeIn';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 
-const WP = 'https://trimsandfasteners.com/wp-content/uploads/';
+const WP = 'https://wp.trimsandfasteners.com/wp-content/uploads/';
 
 interface Props {
   locale: string;

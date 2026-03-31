@@ -1,7 +1,7 @@
 import type { Locale, WPPage, WPPost, WPProduct, ZipperCard, ZipperDetails, MenuItem, WPMedia } from './types';
 import { cleanZipperName } from './utils';
 
-const WP_API = 'https://trimsandfasteners.com/wp-json';
+const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
 
 // Lang param: Polylang uses 'en' | 'pl'
 function langParam(locale: Locale) {

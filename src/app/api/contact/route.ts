@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const CF7_URL = 'https://trimsandfasteners.com/wp-json/contact-form-7/v1/contact-forms/1647/feedback';
+const CF7_URL = 'https://wp.trimsandfasteners.com/wp-json/contact-form-7/v1/contact-forms/1647/feedback';
 const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
 export async function POST(req: NextRequest) {

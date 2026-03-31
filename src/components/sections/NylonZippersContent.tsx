@@ -4,7 +4,7 @@ import ImageCarousel from '@/components/ui/ImageCarousel';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 import FadeIn from '@/components/ui/FadeIn';
 
-const WP = 'https://trimsandfasteners.com/wp-content/uploads/';
+const WP = 'https://wp.trimsandfasteners.com/wp-content/uploads/';
 
 interface Props {
   locale: string;

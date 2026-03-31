@@ -14,21 +14,21 @@ const TYPES = [
     labelPl: 'Zamki plastikowe',
     hrefEn: '/type-of-zippers/plastic-zippers/',
     hrefPl: '/pl/type-of-zippers/plastic-zippers/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg',
   },
   {
     labelEn: 'Nylon Zippers',
     labelPl: 'Zamki nylonowe',
     hrefEn: '/type-of-zippers/nylon-zippers/',
     hrefPl: '/pl/type-of-zippers/nylon-zippers/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg',
   },
   {
     labelEn: 'Metal Zippers',
     labelPl: 'Zamki metalowe',
     hrefEn: '/type-of-zippers/metal-zippers/',
     hrefPl: '/pl/type-of-zippers/metal-zippers/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg',
   },
 ];
 
@@ -108,7 +108,7 @@ export default async function TypeOfZippersPage({ params }: Props) {
       {/* Dark hero */}
       <div className="subpage-hero relative bg-[#111111] text-white min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg"
+          src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg"
           alt=""
           fill
           className="object-cover opacity-40"
@@ -217,7 +217,7 @@ export default async function TypeOfZippersPage({ params }: Props) {
             </FadeIn>
             <FadeIn direction="left" delay={0.1} className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/plastikowyzielony-1.jpg"
                 alt={isEn ? 'Plastic Zippers' : 'Zamki plastikowe'}
                 fill
                 className="object-cover"
@@ -234,7 +234,7 @@ export default async function TypeOfZippersPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeIn direction="right" delay={0.1} className="order-2 lg:order-1 relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6.jpg"
                 alt={isEn ? 'Nylon Zippers' : 'Zamki nylonowe'}
                 fill
                 className="object-cover"
@@ -293,7 +293,7 @@ export default async function TypeOfZippersPage({ params }: Props) {
             </FadeIn>
             <FadeIn direction="left" delay={0.1} className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalslider34-scaled.jpg"
                 alt={isEn ? 'Metal Zippers' : 'Zamki metalowe'}
                 fill
                 className="object-cover"

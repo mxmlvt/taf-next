@@ -14,42 +14,42 @@ const CATEGORIES = [
     labelPl: 'Odzież ognioodporna',
     hrefEn: '/use-of-zippers/fire-protection/',
     hrefPl: '/pl/zastosowanie-zamkow/odziez-ognioodporna/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
   },
   {
     labelEn: 'Military',
     labelPl: 'Wojsko',
     hrefEn: '/use-of-zippers/military/',
     hrefPl: '/pl/zastosowanie-zamkow/wojsko/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
   },
   {
     labelEn: 'Cycling & Sportswear',
     labelPl: 'Kolarstwo & odzież sportowa',
     hrefEn: '/use-of-zippers/cycling-sportswear/',
     hrefPl: '/pl/zastosowanie-zamkow/odziez-sportowa/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
   },
   {
     labelEn: 'Baby',
     labelPl: 'Odzież dziecięca',
     hrefEn: '/use-of-zippers/baby/',
     hrefPl: '/pl/zastosowanie-zamkow/dzieci/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
   },
   {
     labelEn: 'Fashion',
     labelPl: 'Moda',
     hrefEn: '/use-of-zippers/fashion/',
     hrefPl: '/pl/zastosowanie-zamkow/moda/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
     labelEn: 'Buckles & Plastic Hardware',
     labelPl: 'Zapięcia & elementy plastikowe',
     hrefEn: '/use-of-zippers/buckles-plastic-hardware/',
     hrefPl: '/pl/zastosowanie-zamkow/zapiecia-elementy-plastikowe/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
   },
 ];
 
@@ -129,7 +129,7 @@ export default async function UseOfZippersPage({ params }: Props) {
       {/* Dark hero */}
       <div className="subpage-hero relative bg-[#111111] text-white min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png"
+          src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png"
           alt=""
           fill
           className="object-cover opacity-40"
@@ -225,7 +225,7 @@ export default async function UseOfZippersPage({ params }: Props) {
             </FadeIn>
             <FadeIn direction="left" delay={0.1} className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6-1024x1024.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers6-1024x1024.jpg"
                 alt={isEn ? 'Zippers for Cycling & Sportswear' : 'Zamki dla odzieży sportowej'}
                 fill
                 className="object-cover"
@@ -242,7 +242,7 @@ export default async function UseOfZippersPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeIn direction="right" delay={0.1} className="order-2 lg:order-1 relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/zamekswiecacywciemnosci-1-e1751275851765-782x1024.jpg"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamekswiecacywciemnosci-1-e1751275851765-782x1024.jpg"
                 alt={isEn ? "Zippers for Children's Clothing" : 'Zamki do odzieży dziecięcej'}
                 fill
                 className="object-cover"
@@ -291,7 +291,7 @@ export default async function UseOfZippersPage({ params }: Props) {
             </FadeIn>
             <FadeIn direction="left" delay={0.1} className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://trimsandfasteners.com/wp-content/uploads/2025/06/metaloweakcesoriadlamody-scaled-e1751275748542-870x1024.png"
+                src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metaloweakcesoriadlamody-scaled-e1751275748542-870x1024.png"
                 alt={isEn ? 'Zippers for Fashion' : 'Zamki dla branży modowej'}
                 fill
                 className="object-cover"

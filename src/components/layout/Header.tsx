@@ -18,32 +18,32 @@ const USE_CATS_EN = [
   {
     label: 'Zippers for fire-resistant clothing',
     href: '/use-of-zippers/fire-protection/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
   },
   {
     label: 'Zippers for Military',
     href: '/use-of-zippers/military/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
   },
   {
     label: 'Zippers for cycling & sportswear',
     href: '/use-of-zippers/cycling-sportswear/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
   },
   {
     label: 'Zippers for babies',
     href: '/use-of-zippers/baby/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
   },
   {
     label: 'Zippers for fashion',
     href: '/use-of-zippers/fashion/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
     label: 'Buckles & plastic hardware',
     href: '/use-of-zippers/buckles-plastic-hardware/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
   },
 ];
 
@@ -51,32 +51,32 @@ const USE_CATS_PL = [
   {
     label: 'Zamki do odzieży ognioodpornej',
     href: '/pl/use-of-zippers/fire-protection/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
   },
   {
     label: 'Zamki dla wojska',
     href: '/pl/use-of-zippers/military/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
   },
   {
     label: 'Zamki dla kolarstwa i sportu',
     href: '/pl/use-of-zippers/cycling-sportswear/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
   },
   {
     label: 'Zamki do odzieży dziecięcej',
     href: '/pl/use-of-zippers/baby/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
   },
   {
     label: 'Zamki dla mody',
     href: '/pl/use-of-zippers/fashion/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
     label: 'Zapięcia i elementy plastikowe',
     href: '/pl/use-of-zippers/buckles-plastic-hardware/',
-    img: 'https://trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
+    img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
   },
 ];
 
@@ -112,12 +112,12 @@ export default function Header({ menu, translations }: HeaderProps) {
     try {
       const lang = locale === 'pl' ? '&lang=pl' : '';
       const res = await fetch(
-        `https://trimsandfasteners.com/wp-json/wp/v2/pages?search=${encodeURIComponent(q)}&per_page=6&_fields=id,title,slug,link,type${lang}`
+        `https://wp.trimsandfasteners.com/wp-json/wp/v2/pages?search=${encodeURIComponent(q)}&per_page=6&_fields=id,title,slug,link,type${lang}`
       );
       const pages: SearchResult[] = await res.json();
       // Also search posts
       const res2 = await fetch(
-        `https://trimsandfasteners.com/wp-json/wp/v2/posts?search=${encodeURIComponent(q)}&per_page=4&_fields=id,title,slug,link,type${lang}`
+        `https://wp.trimsandfasteners.com/wp-json/wp/v2/posts?search=${encodeURIComponent(q)}&per_page=4&_fields=id,title,slug,link,type${lang}`
       );
       const posts: SearchResult[] = await res2.json();
       setSearchResults([...pages, ...posts].slice(0, 8));
@@ -167,16 +167,16 @@ export default function Header({ menu, translations }: HeaderProps) {
   // Type of Zippers items with hover images
   const typeItems = locale === 'en'
     ? [
-        { label: 'Plastic zippers', href: '/type-of-zippers/plastic-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
-        { label: 'Nylon zippers', href: '/type-of-zippers/nylon-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Nylon zipper chain size chart', href: '/nylon-zipper-chain-size-chart/' } },
-        { label: 'Metal zippers', href: '/type-of-zippers/metal-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
-        { label: 'Personalization', href: '/personalization/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
+        { label: 'Plastic zippers', href: '/type-of-zippers/plastic-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
+        { label: 'Nylon zippers', href: '/type-of-zippers/nylon-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Nylon zipper chain size chart', href: '/nylon-zipper-chain-size-chart/' } },
+        { label: 'Metal zippers', href: '/type-of-zippers/metal-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
+        { label: 'Personalization', href: '/personalization/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
       ]
     : [
-        { label: 'Zamki plastikowe', href: '/pl/type-of-zippers/plastic-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
-        { label: 'Zamki nylonowe', href: '/pl/type-of-zippers/nylon-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Tabela rozmiarów taśm nylonowych', href: '/pl/nylon-zipper-chain-size-chart/' } },
-        { label: 'Zamki metalowe', href: '/pl/type-of-zippers/metal-zippers/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
-        { label: 'Personalizacja', href: '/pl/personalization/', img: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
+        { label: 'Zamki plastikowe', href: '/pl/type-of-zippers/plastic-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
+        { label: 'Zamki nylonowe', href: '/pl/type-of-zippers/nylon-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Tabela rozmiarów taśm nylonowych', href: '/pl/nylon-zipper-chain-size-chart/' } },
+        { label: 'Zamki metalowe', href: '/pl/type-of-zippers/metal-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
+        { label: 'Personalizacja', href: '/pl/personalization/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
       ];
 
   // Simple nav items (non-dropdown)
@@ -222,7 +222,7 @@ export default function Header({ menu, translations }: HeaderProps) {
           {/* Logo */}
           <Link href={locale === 'en' ? '/' : '/pl/'} className="flex items-center flex-shrink-0">
             <Image
-              src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
+              src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
               alt="TAF - Trims and Fasteners"
               width={100}
               height={40}

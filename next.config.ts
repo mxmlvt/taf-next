@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         hostname: 'trimsandfasteners.com',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'wp.trimsandfasteners.com',
+        pathname: '/wp-content/uploads/**',
+      },
     ],
   },
 

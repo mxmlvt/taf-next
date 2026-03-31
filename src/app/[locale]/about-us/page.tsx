@@ -30,7 +30,7 @@ export default async function AboutPage({ params }: Props) {
       {/* Dark hero */}
       <div className="subpage-hero relative bg-[#111111] text-white min-h-[90vh] flex items-center overflow-hidden">
         <Image
-          src="https://trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
+          src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg"
           alt=""
           fill
           className="object-cover opacity-30"
@@ -103,7 +103,7 @@ export default async function AboutPage({ params }: Props) {
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src="https://trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
+                  src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png"
                   alt="TAF - Trims and Fasteners"
                   width={200}
                   height={80}

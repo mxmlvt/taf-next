@@ -6,12 +6,12 @@ interface Props { locale: string }
 const TOGGLE_EN: ToggleItem[] = [
   {
     label: 'Standard zipper',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'In a standard coil zipper, the teeth are visible on the tape. This is a classic, functional solution that often requires a fabric flap for covering or is intentionally exposed as a design element.',
   },
   {
     label: 'Concealed zipper',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers11-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers11-1024x1024.jpg',
     description: 'In a concealed zipper, the teeth are completely hidden behind the tape, making it look like a regular seam when sewn. It\'s ideal when aesthetics require an invisible closure.',
   },
 ];
@@ -19,12 +19,12 @@ const TOGGLE_EN: ToggleItem[] = [
 const TOGGLE_PL: ToggleItem[] = [
   {
     label: 'Zamek standardowy',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'W standardowym zamku spiralnym ząbki są widoczne na taśmie. Jest to klasyczne, funkcjonalne rozwiązanie, które często wymaga zakrycia klapą materiału lub jest celowo eksponowane jako element designu.',
   },
   {
     label: 'Zamek kryty',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers11-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers11-1024x1024.jpg',
     description: 'W zamku krytym ząbki są całkowicie ukryte za taśmą, sprawiając, że po wszyciu wygląda on jak zwykły szew. Idealny, gdy estetyka wymaga niewidocznego zapięcia.',
   },
 ];
@@ -32,12 +32,12 @@ const TOGGLE_PL: ToggleItem[] = [
 const COMPARISON_EN: SideBySideItem[] = [
   {
     label: 'Standard Sewn Coil',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'The teeth are sewn onto the tape with polyester thread. The threads can degrade from UV exposure, and the teeth may separate from the tape—a potential weak point.',
   },
   {
     label: 'Woven S-Type Tape Zipper',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
     description: 'In this advanced construction, the tooth elements are integrally woven into the tape\'s structure. This eliminates the weak point of thread degradation and radically increases durability.',
   },
 ];
@@ -45,12 +45,12 @@ const COMPARISON_EN: SideBySideItem[] = [
 const COMPARISON_PL: SideBySideItem[] = [
   {
     label: 'Standardowa spirala szyta',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'Ząbki są przyszywane do taśmy nicią poliestrową. W momencie przerwania nici – najczęściej przez przetarcie przez obce przedmioty (np. ziarnka piasku) – żyłka zaczyna się odpruwać od materiału, przez co zamek przestaje spełniać swoją funkcję.',
   },
   {
     label: 'Zamek na taśmie S tkanej',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
     description: 'W tej zaawansowanej konstrukcji elementy ząbkowe są integralnie wplecione w strukturę taśmy. Eliminuje to potencjalny słaby punkt związany z degradacją nici lub oddzielaniem się ząbków, radykalnie zwiększając wytrzymałość.',
   },
 ];
@@ -116,7 +116,7 @@ export default function CoilZippersPost({ locale }: Props) {
       <div className="not-prose my-8">
         <div className="relative w-full max-w-2xl aspect-[718/500] overflow-hidden bg-gray-100">
           <Image
-            src="https://trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg"
+            src="https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg"
             alt={isEn ? 'Woven S-Type vs Standard sewn coil comparison' : 'Porównanie spirali S-Type tkanej i standardowej szytej'}
             fill
             className="object-contain"

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 
-const WP = 'https://trimsandfasteners.com/wp-content/uploads/';
+const WP = 'https://wp.trimsandfasteners.com/wp-content/uploads/';
 
 interface Props {
   locale: string;

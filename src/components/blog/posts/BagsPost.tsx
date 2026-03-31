@@ -37,12 +37,12 @@ const TYPE_CARDS_PL: TypeCard[] = [
 const COMPARISON_EN: SideBySideItem[] = [
   {
     label: 'S-Type Zipper with a Woven-in Coil',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
     description: 'In this innovative construction, the zipper elements are woven directly into the tape. This eliminates weak points associated with sewing, making the zipper significantly more resistant to tearing, abrasion, and tooth separation. This ensures higher durability and reliability.',
   },
   {
     label: 'Standard Sewn Coil Zipper',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'In this construction, the teeth are sewn onto the tape with polyester thread ("standard sewn coil"). These threads can be a weak point, especially due to UV degradation or intensive use, leading to the risk of the coil separating from the tape.',
   },
 ];
@@ -50,12 +50,12 @@ const COMPARISON_EN: SideBySideItem[] = [
 const COMPARISON_PL: SideBySideItem[] = [
   {
     label: 'Zamek spiralny na taśmie S-Type (Woven-in)',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg',
     description: 'W tej innowacyjnej konstrukcji elementy zamka są wplecione bezpośrednio w taśmę. Eliminuje to słabe punkty związane z szyciem, czyniąc zamek znacznie bardziej odpornym na rozdarcia, ścieranie i oddzielanie się ząbków. Zapewnia to wyższą trwałość i niezawodność.',
   },
   {
     label: 'Standardowy zamek spiralny szyty',
-    src: 'https://trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
+    src: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzippers8-1024x1024.jpg',
     description: 'W tej konstrukcji ząbki są przyszywane do taśmy nicią poliestrową – typowa „zwykła spirala szyta". Nici te mogą stanowić słaby punkt, zwłaszcza pod wpływem degradacji UV lub intensywnego użytkowania, co prowadzi do ryzyka oddzielania się spirali od taśmy.',
   },
 ];

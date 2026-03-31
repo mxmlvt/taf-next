@@ -108,7 +108,7 @@ export default function NylonZippersContent({ locale, position }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
               {/* Standard */}
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-[Jost] text-xl font-light mb-3 text-[#111]">
                   {isEn ? 'Standard' : 'Standardowy'}
                 </h3>
@@ -117,19 +117,18 @@ export default function NylonZippersContent({ locale, position }: Props) {
                     ? 'Commonly used across the apparel industry, from footwear to furniture and car seats, these zippers are primarily utilized in outdoor and sports applications.'
                     : 'Powszechnie stosowane w przemyśle odzieżowym, od obuwia po meble i siedzenia samochodowe. Głównie używane w odzieży outdoor i sportowej.'}
                 </p>
-                <div className="overflow-hidden group">
+                <div className="relative overflow-hidden group aspect-[4/3]">
                   <Image
                     src={`${WP}2025/06/standardowa-spirala-nylonowa-min-1024x681.png`}
                     alt={isEn ? 'Standard nylon coil zipper' : 'Standardowy zamek spiralny'}
-                    width={700}
-                    height={467}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
               </div>
               {/* Reverse */}
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-[Jost] text-xl font-light mb-3 text-[#111]">
                   {isEn ? 'Reverse' : 'Odwrócony'}
                 </h3>
@@ -138,13 +137,12 @@ export default function NylonZippersContent({ locale, position }: Props) {
                     ? 'This is the same type of zipper (coil zipper), but the slider operates on the tape side, which keeps the zipper elements hidden.'
                     : 'Ten sam typ zamka, ale suwak działa po stronie taśmy, dzięki czemu elementy zamka pozostają ukryte.'}
                 </p>
-                <div className="overflow-hidden group">
+                <div className="relative overflow-hidden group aspect-[4/3]">
                   <Image
                     src={`${WP}2025/10/2800134-1024x1024.jpg`}
                     alt={isEn ? 'Reverse nylon zipper' : 'Zamek spiralny odwrócony'}
-                    width={600}
-                    height={600}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
@@ -212,7 +210,7 @@ export default function NylonZippersContent({ locale, position }: Props) {
       </section>
 
       {/* ── Military / PPE ── */}
-      <section className="py-16 bg-[#111111]">
+      <section className="py-24 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <FadeIn direction="right" className="relative overflow-hidden group">
@@ -261,13 +259,12 @@ export default function NylonZippersContent({ locale, position }: Props) {
                     : 'Mamy długie doświadczenie w dostarczaniu różnego rodzaju zamków błyskawicznych dla producentów odzieży kolarskiej. Doskonale znamy tę branżę i możemy zaoferować zarówno innowacyjne rozwiązania, jak i najlepsze oferty na standardowe zamki.'}
                 </p>
               </div>
-              <div className="overflow-hidden group flex-1 min-h-[200px]">
+              <div className="relative overflow-hidden group h-[240px]">
                 <Image
                   src={`${WP}2025/06/sport-garment-zipper--1024x576.jpeg`}
                   alt={isEn ? 'Sportswear zipper application' : 'Zamek w odzieży sportowej'}
-                  width={700}
-                  height={400}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -453,58 +450,54 @@ export default function NylonZippersContent({ locale, position }: Props) {
       {/* ── Woven S-Tape vs Standard ── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-8 text-[#111] text-center">
-            {isEn ? 'Woven-in S-Tape Zippers vs. Standard Sewn Coil Zippers' : 'Spirala tkana S-Tape vs. standardowa szyta'}
-          </h2>
-          <p className="font-[Jost] text-gray-500 text-sm leading-relaxed mb-8 max-w-3xl mx-auto text-center">
-            {isEn
-              ? "The evolution of coil zippers reflects the industry's continuous drive to enhance durability and reliability. Key differences in construction significantly impact their performance characteristics."
-              : 'Ewolucja zamków spiralnych odzwierciedla ciągłe dążenie branży do poprawy trwałości i niezawodności. Kluczowe różnice w budowie znacząco wpływają na charakterystykę wydajności.'}
-          </p>
-          <div className="overflow-hidden group mb-8 max-w-[70%] mx-auto">
-            <Image
-              src={`${WP}2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg`}
-              alt={isEn ? 'Woven vs standard coil zipper comparison' : 'Porównanie spirali tkanej i standardowej'}
-              width={1024}
-              height={718}
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-              sizes="70vw"
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-[Jost] text-lg font-medium mb-3 text-[#111]">
-                {isEn ? 'Standard Sewn Coil Zipper' : 'Standardowa spirala szyta'}
-              </h3>
-              <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
-                {isEn
-                  ? 'In a standard sewn coil zipper, the teeth, formed into a coil from nylon or polyester filament, are sewn onto the side tape with polyester thread. The threads can degrade from UV exposure, and the teeth might separate from the tape, creating a potential weak point.'
-                  : 'W standardowym zamku spiralnym szytym, ząbki uformowane w spiralę z filamentu nylonowego lub poliestrowego, są przyszywane do taśmy bocznej nicią poliestrową. Nici mogą degradować pod wpływem UV, a ząbki mogą oddzielać się od taśmy.'}
-              </p>
+          <div className="max-w-[70%] mx-auto">
+            <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-4 text-[#111] text-center">
+              {isEn ? 'Woven-in S-Tape Zippers vs. Standard Sewn Coil Zippers' : 'Spirala tkana S-Tape vs. standardowa szyta'}
+            </h2>
+            <p className="font-[Jost] text-gray-500 text-sm leading-relaxed mb-8 text-center">
+              {isEn
+                ? "The evolution of coil zippers reflects the industry's continuous drive to enhance durability and reliability. Key differences in construction significantly impact their performance characteristics."
+                : 'Ewolucja zamków spiralnych odzwierciedla ciągłe dążenie branży do poprawy trwałości i niezawodności. Kluczowe różnice w budowie znacząco wpływają na charakterystykę wydajności.'}
+            </p>
+            <div className="overflow-hidden group mb-8">
+              <Image
+                src={`${WP}2025/06/porownanie-spirali-S80-WOVENIN-I-standardowej-80S-sewon-type-1024x718.jpeg`}
+                alt={isEn ? 'Woven vs standard coil zipper comparison' : 'Porównanie spirali tkanej i standardowej'}
+                width={1024}
+                height={718}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="70vw"
+              />
             </div>
-            <div>
-              <h3 className="font-[Jost] text-lg font-medium mb-3 text-[#111]">
-                {isEn ? 'Woven-in S-Tape Zipper' : 'Spirala tkana S-Tape'}
-              </h3>
-              <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
-                {isEn
-                  ? "In this advanced construction, the tooth elements are integrally woven into the tape's structure, rather than just sewn on. This eliminates the potential weak point associated with thread degradation or tooth separation, radically increasing durability."
-                  : 'W tej zaawansowanej konstrukcji elementy ząbkowe są integralnie wplecione w strukturę taśmy, a nie tylko przyszyte. Eliminuje to słaby punkt związany z degradacją nici lub oddzielaniem się ząbków, radykalnie zwiększając trwałość.'}
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="font-[Jost] text-lg font-medium mb-3 text-[#111]">
+                  {isEn ? 'Standard Sewn Coil Zipper' : 'Standardowa spirala szyta'}
+                </h3>
+                <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
+                  {isEn
+                    ? 'In a standard sewn coil zipper, the teeth, formed into a coil from nylon or polyester filament, are sewn onto the side tape with polyester thread. The threads can degrade from UV exposure, and the teeth might separate from the tape, creating a potential weak point.'
+                    : 'W standardowym zamku spiralnym szytym, ząbki uformowane w spiralę z filamentu nylonowego lub poliestrowego, są przyszywane do taśmy bocznej nicią poliestrową. Nici mogą degradować pod wpływem UV, a ząbki mogą oddzielać się od taśmy.'}
+                </p>
+              </div>
+              <div>
+                <h3 className="font-[Jost] text-lg font-medium mb-3 text-[#111]">
+                  {isEn ? 'Woven-in S-Tape Zipper' : 'Spirala tkana S-Tape'}
+                </h3>
+                <p className="font-[Jost] text-gray-500 text-sm leading-relaxed">
+                  {isEn
+                    ? "In this advanced construction, the tooth elements are integrally woven into the tape's structure, rather than just sewn on. This eliminates the potential weak point associated with thread degradation or tooth separation, radically increasing durability."
+                    : 'W tej zaawansowanej konstrukcji elementy ząbkowe są integralnie wplecione w strukturę taśmy, a nie tylko przyszyte. Eliminuje to słaby punkt związany z degradacją nici lub oddzielaniem się ząbków, radykalnie zwiększając trwałość.'}
+                </p>
+              </div>
             </div>
+            <Link
+              href={locale === 'en' ? '/nylon-zipper-chain-size-chart/' : '/pl/nylon-zipper-chain-size-chart/'}
+              className="inline-flex items-center gap-2 text-sm font-[Jost] text-gray-600 hover:text-black border border-gray-300 hover:border-gray-600 px-5 py-3 transition-colors"
+            >
+              {locale === 'en' ? 'View Nylon Zipper Chain Size Chart →' : 'Zobacz tabelę rozmiarów taśm nylonowych →'}
+            </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ── Size Chart ── */}
-      <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href={locale === 'en' ? '/nylon-zipper-chain-size-chart/' : '/pl/nylon-zipper-chain-size-chart/'}
-            className="inline-flex items-center gap-2 text-sm font-[Jost] text-gray-600 hover:text-black border border-gray-200 hover:border-gray-400 rounded-lg px-5 py-3 transition-colors"
-          >
-            {locale === 'en' ? 'View Nylon Zipper Chain Size Chart →' : 'Zobacz tabelę rozmiarów taśm nylonowych →'}
-          </Link>
         </div>
       </section>
 

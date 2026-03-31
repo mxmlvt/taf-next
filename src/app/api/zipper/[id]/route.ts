@@ -2,6 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cleanZipperName } from '@/lib/utils';
 
 const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
+const OLD = 'https://trimsandfasteners.com/wp-content/';
+const NEW = 'https://wp.trimsandfasteners.com/wp-content/';
+
+// Rewrite any leftover old-domain image URLs in API response
+function rewriteUrls(obj: unknown): unknown {
+  if (typeof obj === 'string') return obj.replaceAll(OLD, NEW);
+  if (Array.isArray(obj)) return obj.map(rewriteUrls);
+  if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj as Record<string, unknown>).map(([k, v]) => [k, rewriteUrls(v)])
+    );
+  }
+  return obj;
+}
 
 export async function GET(
   _req: NextRequest,
@@ -21,8 +35,8 @@ export async function GET(
     if (!res.ok) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 });
     }
-    const data = await res.json();
-    // Clean eng/en suffix from EN popup post titles
+    const raw = await res.json();
+    const data = rewriteUrls(raw) as typeof raw;
     data.name = cleanZipperName(data.name);
     return NextResponse.json(data, {
       headers: {

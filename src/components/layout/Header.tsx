@@ -277,7 +277,7 @@ export default function Header({ menu, translations }: HeaderProps) {
           <div className="flex items-center gap-2">
             {/* Search icon button */}
             <button
-              className="hidden lg:flex items-center justify-center w-8 h-8 bg-black text-white hover:bg-gray-800 transition-colors"
+              className="flex items-center justify-center w-8 h-8 bg-black text-white hover:bg-gray-800 transition-colors"
               aria-label="Search"
               onClick={openSearch}
             >
@@ -319,12 +319,12 @@ export default function Header({ menu, translations }: HeaderProps) {
           style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1300px' }}
           onMouseLeave={() => setOpenDropdown(null)}
         >
-          <div className="py-8 flex-1">
+          <div className="py-10 flex-1">
             {typeItems.map((item, i) => (
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block px-6 py-5 text-sm font-[Jost] transition-colors ${
+                  className={`block px-6 py-6 text-sm font-[Jost] transition-colors ${
                     hoveredTypeCat === i ? 'text-black bg-gray-50' : 'text-gray-600 hover:text-black hover:bg-gray-50'
                   }`}
                   onMouseEnter={() => setHoveredTypeCat(i)}
@@ -350,6 +350,7 @@ export default function Header({ menu, translations }: HeaderProps) {
               src={typeItems[hoveredTypeCat]?.img || typeItems[0].img}
               alt={typeItems[hoveredTypeCat]?.label || ''}
               fill
+              quality={90}
               className="object-cover transition-all duration-300"
               sizes="800px"
             />
@@ -364,12 +365,12 @@ export default function Header({ menu, translations }: HeaderProps) {
           style={{ left: '50%', transform: 'translateX(-50%)', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', width: '1300px' }}
           onMouseLeave={() => setOpenDropdown(null)}
         >
-          <div className="py-4 flex-1">
+          <div className="py-5 flex-1">
             {useCats.map((cat, i) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className={`block px-6 py-3 text-sm font-[Jost] transition-colors ${
+                className={`block px-6 py-4 text-sm font-[Jost] transition-colors ${
                   hoveredUseCat === i ? 'text-black bg-gray-50' : 'text-gray-600 hover:text-black hover:bg-gray-50'
                 }`}
                 onMouseEnter={() => setHoveredUseCat(i)}
@@ -384,6 +385,7 @@ export default function Header({ menu, translations }: HeaderProps) {
               src={useCats[hoveredUseCat]?.img || useCats[0].img}
               alt={useCats[hoveredUseCat]?.label || ''}
               fill
+              quality={90}
               className="object-cover transition-all duration-300"
               sizes="800px"
             />
@@ -512,6 +514,23 @@ export default function Header({ menu, translations }: HeaderProps) {
               {item.label}
             </Link>
           ))}
+
+          {/* Language switcher mobile */}
+          <div className="flex items-center gap-0 px-3 pt-4 mt-2 border-t border-gray-100">
+            <a
+              href={locale === 'en' ? '#' : '/'}
+              className={`text-sm font-[Jost] font-medium px-2 py-1 transition-colors ${locale === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}`}
+            >
+              EN
+            </a>
+            <span className="text-gray-300 text-sm">|</span>
+            <a
+              href={locale === 'pl' ? '#' : '/pl/'}
+              className={`text-sm font-[Jost] font-medium px-2 py-1 transition-colors ${locale === 'pl' ? 'text-black' : 'text-gray-400 hover:text-black'}`}
+            >
+              PL
+            </a>
+          </div>
         </div>
       </div>
     </header>

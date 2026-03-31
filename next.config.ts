@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
   // Rewrites: Polish translated URLs served natively (URL stays Polish – this IS the canonical)
   async rewrites() {
     return [
+      // Proxy WordPress assets/API so old trimsandfasteners.com image URLs still resolve
+      { source: '/wp-content/:path*', destination: 'https://wp.trimsandfasteners.com/wp-content/:path*' },
+      { source: '/wp-json/:path*',    destination: 'https://wp.trimsandfasteners.com/wp-json/:path*' },
+      { source: '/wp-admin/:path*',   destination: 'https://wp.trimsandfasteners.com/wp-admin/:path*' },
+      { source: '/wp-login.php',      destination: 'https://wp.trimsandfasteners.com/wp-login.php' },
+
       { source: '/pl/zastosowanie-zamkow/:slug*', destination: '/pl/use-of-zippers/:slug*' },
       { source: '/pl/zastosowanie-zamkow',        destination: '/pl/use-of-zippers' },
       { source: '/pl/rodzaje-zamkow/:slug*',       destination: '/pl/type-of-zippers/:slug*' },

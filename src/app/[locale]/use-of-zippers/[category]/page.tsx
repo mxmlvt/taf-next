@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -161,29 +162,37 @@ export default async function CategoryPage({ params }: Props) {
       {enSlug === 'furniture' && <FurnitureContent locale={locale} position="above" />}
       {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="above" />}
 
-      {/* Our products section — split into sections of 12 */}
+      {/* Our products — split into blocks of 12, "below" content interleaved after block 0 */}
       {zippers.length > 0 && Array.from({ length: Math.ceil(zippers.length / 12) }, (_, i) => (
-        <section key={i} className="bg-[#f5f3ef] py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-3 text-[#111]">
-              {locale === 'en' ? 'Our products' : 'Nasze produkty'}
-            </h2>
-            <p className="font-[Jost] text-sm text-gray-400 mb-8">
-              {zippers.length} {locale === 'en' ? 'products' : 'produktów'}
-            </p>
-            <ZipperGrid zippers={zippers.slice(i * 12, i * 12 + 12)} />
-          </div>
-        </section>
+        <React.Fragment key={i}>
+          <section className="bg-[#f5f3ef] py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {i === 0 && (
+                <>
+                  <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-3 text-[#111]">
+                    {locale === 'en' ? 'Our products' : 'Nasze produkty'}
+                  </h2>
+                  <p className="font-[Jost] text-sm text-gray-400 mb-8">
+                    {zippers.length} {locale === 'en' ? 'products' : 'produktów'}
+                  </p>
+                </>
+              )}
+              <ZipperGrid zippers={zippers.slice(i * 12, i * 12 + 12)} />
+            </div>
+          </section>
+          {i === 0 && (
+            <>
+              {enSlug === 'fire-protection' && <FireProtectionContent locale={locale} position="below" />}
+              {enSlug === 'military' && <MilitaryContent locale={locale} position="below" />}
+              {enSlug === 'cycling-sportswear' && <CyclingSportswearContent locale={locale} position="below" />}
+              {enSlug === 'baby' && <BabyContent locale={locale} position="below" />}
+              {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
+              {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
+              {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
+            </>
+          )}
+        </React.Fragment>
       ))}
-
-      {/* Hardcoded content sections (below product grid) */}
-      {enSlug === 'fire-protection' && <FireProtectionContent locale={locale} position="below" />}
-      {enSlug === 'military' && <MilitaryContent locale={locale} position="below" />}
-      {enSlug === 'cycling-sportswear' && <CyclingSportswearContent locale={locale} position="below" />}
-      {enSlug === 'baby' && <BabyContent locale={locale} position="below" />}
-      {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
-      {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
-      {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
 
     </div>
   );

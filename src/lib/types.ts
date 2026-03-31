@@ -52,11 +52,17 @@ export interface ZipperCard {
   thumbnailAlt: string;
 }
 
+export interface ZipperApplicationIcon {
+  url: string;
+  label: string;
+}
+
 export interface ZipperDetails extends ZipperCard {
   description: string;
   specs: ZipperSpec[];
   features?: string[];
   additionalImages?: string[];
+  applicationIcons?: ZipperApplicationIcon[];
   translations: Record<string, number>;
 }
 

@@ -119,6 +119,33 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
                 </div>
               )}
 
+              {/* Application icons */}
+              {data.applicationIcons && data.applicationIcons.length > 0 && (
+                <div className="mb-4">
+                  <h3 className="font-[Jost] text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
+                    {locale === 'en' ? 'Application' : 'Zastosowanie'}
+                  </h3>
+                  <div className="flex flex-wrap gap-4">
+                    {data.applicationIcons.map((icon, i) => (
+                      <div key={i} className="flex flex-col items-center gap-1.5 w-16">
+                        <div className="relative w-12 h-12">
+                          <Image
+                            src={icon.url}
+                            alt={icon.label}
+                            fill
+                            className="object-contain"
+                            sizes="48px"
+                          />
+                        </div>
+                        <span className="font-[Jost] text-[10px] text-gray-500 text-center leading-tight">
+                          {icon.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Specs table */}
               {data.specs && data.specs.length > 0 && (
                 <div className="mb-4">

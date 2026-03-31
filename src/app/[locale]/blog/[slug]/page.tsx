@@ -9,14 +9,20 @@ import CustomPostBody, { getCustomHeadings } from '@/components/blog/CustomPostB
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+// Temporarily removed from site per client request (patent/legal reasons); files preserved
+const HIDDEN_SLUGS = new Set([
+  'zippers-in-the-furniture-industry',
+  'zamki-blyskawiczne-w-branzy-meblarskiej',
+]);
+
 export async function generateStaticParams() {
   const [enSlugs, plSlugs] = await Promise.all([
     getAllPostSlugs('en'),
     getAllPostSlugs('pl'),
   ]);
   return [
-    ...enSlugs.map(slug => ({ locale: 'en', slug })),
-    ...plSlugs.map(slug => ({ locale: 'pl', slug })),
+    ...enSlugs.filter(slug => !HIDDEN_SLUGS.has(slug)).map(slug => ({ locale: 'en', slug })),
+    ...plSlugs.filter(slug => !HIDDEN_SLUGS.has(slug)).map(slug => ({ locale: 'pl', slug })),
   ];
 }
 
@@ -47,7 +53,7 @@ export default async function BlogPostPage({ params }: Props) {
     getPostBySlug(slug, locale as Locale),
     getRecentPosts(locale as Locale, 5),
   ]);
-  if (!post) notFound();
+  if (!post || HIDDEN_SLUGS.has(slug)) notFound();
 
   const featuredImage = post._embedded?.['wp:featuredmedia']?.[0];
   const backHref = locale === 'en' ? '/blog/' : '/pl/blog/';

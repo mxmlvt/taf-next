@@ -29,7 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // EN posts were bulk-imported with wrong dates; these match the original PL publication dates
 const EN_DATE_FIX: Record<string, string> = {
   'zippers-for-bags-and-backpacks': '2025-07-02T22:47:44',
-  'zippers-in-the-furniture-industry': '2025-07-02T22:30:38',
   'where-to-buy-zippers-wholesale': '2025-06-27T14:49:29',
   'coil-zippers-characteristics-and-subtypes': '2025-06-27T14:06:42',
   'zippers-comparison-metal-plastic-and-nylon': '2025-06-20T10:03:16',
@@ -37,9 +36,15 @@ const EN_DATE_FIX: Record<string, string> = {
   'how-to-recognize-a-high-quality-zipper': '2025-05-14T15:49:31',
 };
 
+const HIDDEN_SLUGS = new Set([
+  'zippers-in-the-furniture-industry',
+  'zamki-blyskawiczne-w-branzy-meblarskiej',
+]);
+
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
-  const { posts } = await getBlogPosts(locale as Locale);
+  const { posts: allPosts } = await getBlogPosts(locale as Locale);
+  const posts = allPosts.filter(p => !HIDDEN_SLUGS.has(p.slug));
 
   return (
     <div>

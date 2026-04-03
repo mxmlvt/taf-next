@@ -43,6 +43,26 @@ const nextConfig: NextConfig = {
   // Redirects: English-slug Polish URLs → proper Polish translated URLs (301)
   async redirects() {
     return [
+      // Blog posts: old WP had no /blog/ prefix, new site uses /blog/slug
+      { source: '/zippers-comparison-metal-plastic-and-nylon',  destination: '/blog/zippers-comparison-metal-plastic-and-nylon',  permanent: true },
+      { source: '/zippers-comparison-metal-plastic-and-nylon/', destination: '/blog/zippers-comparison-metal-plastic-and-nylon/', permanent: true },
+      { source: '/coil-zippers-characteristics-and-subtypes',   destination: '/blog/coil-zippers-characteristics-and-subtypes',   permanent: true },
+      { source: '/coil-zippers-characteristics-and-subtypes/',  destination: '/blog/coil-zippers-characteristics-and-subtypes/',  permanent: true },
+      { source: '/where-to-buy-zippers-wholesale',              destination: '/blog/where-to-buy-zippers-wholesale',              permanent: true },
+      { source: '/where-to-buy-zippers-wholesale/',             destination: '/blog/where-to-buy-zippers-wholesale/',             permanent: true },
+      { source: '/zippers-for-bags-and-backpacks',              destination: '/blog/zippers-for-bags-and-backpacks',              permanent: true },
+      { source: '/zippers-for-bags-and-backpacks/',             destination: '/blog/zippers-for-bags-and-backpacks/',             permanent: true },
+      { source: '/zippers-in-the-furniture-industry',           destination: '/',  permanent: true },
+      { source: '/zippers-in-the-furniture-industry/',          destination: '/',  permanent: true },
+      { source: '/blog/zippers-in-the-furniture-industry',      destination: '/',  permanent: true },
+      { source: '/blog/zippers-in-the-furniture-industry/',     destination: '/',  permanent: true },
+      { source: '/pl/blog/zamki-blyskawiczne-w-branzy-meblarskiej',  destination: '/pl/', permanent: true },
+      { source: '/pl/blog/zamki-blyskawiczne-w-branzy-meblarskiej/', destination: '/pl/', permanent: true },
+      { source: '/how-to-fix-zipper-problems',                  destination: '/blog/how-to-fix-zipper-problems',                  permanent: true },
+      { source: '/how-to-fix-zipper-problems/',                 destination: '/blog/how-to-fix-zipper-problems/',                 permanent: true },
+      { source: '/how-to-recognize-a-high-quality-zipper',      destination: '/blog/how-to-recognize-a-high-quality-zipper',      permanent: true },
+      { source: '/how-to-recognize-a-high-quality-zipper/',     destination: '/blog/how-to-recognize-a-high-quality-zipper/',     permanent: true },
+
       // use-of-zippers – redirect EN slugs to PL slugs
       { source: '/pl/use-of-zippers/fashion',                  destination: '/pl/zastosowanie-zamkow/moda',                        permanent: true },
       { source: '/pl/use-of-zippers/cycling-sportswear',       destination: '/pl/zastosowanie-zamkow/odziez-sportowa',             permanent: true },

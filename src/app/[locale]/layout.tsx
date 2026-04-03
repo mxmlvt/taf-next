@@ -15,10 +15,6 @@ const GA_ID = 'G-1WQEEEEQ4B';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://trimsandfasteners.com'),
-  icons: {
-    icon: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png',
-    apple: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/08/Projekt-bez-nazwy-75.png',
-  },
 };
 
 export function generateStaticParams() {

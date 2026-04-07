@@ -2,12 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cleanZipperName } from '@/lib/utils';
 
 const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
-const OLD = 'https://trimsandfasteners.com/wp-content/';
+const OLD_HTTPS = 'https://trimsandfasteners.com/wp-content/';
+const OLD_HTTP  = 'http://trimsandfasteners.com/wp-content/';
 const NEW = 'https://wp.trimsandfasteners.com/wp-content/';
 
 // Rewrite any leftover old-domain image URLs in API response
 function rewriteUrls(obj: unknown): unknown {
-  if (typeof obj === 'string') return obj.replaceAll(OLD, NEW);
+  if (typeof obj === 'string') return obj.replaceAll(OLD_HTTPS, NEW).replaceAll(OLD_HTTP, NEW);
   if (Array.isArray(obj)) return obj.map(rewriteUrls);
   if (obj && typeof obj === 'object') {
     return Object.fromEntries(
@@ -18,10 +19,11 @@ function rewriteUrls(obj: unknown): unknown {
 }
 
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+  const lang = req.nextUrl.searchParams.get('lang') || 'en';
   const numId = parseInt(id);
   if (isNaN(numId)) {
     return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
@@ -29,7 +31,7 @@ export async function GET(
 
   try {
     const res = await fetch(
-      `${WP_API}/taf/v1/zipper/${numId}`,
+      `${WP_API}/taf/v1/zipper/${numId}?lang=${lang}`,
       { next: { revalidate: 3600 } }
     );
     if (!res.ok) {

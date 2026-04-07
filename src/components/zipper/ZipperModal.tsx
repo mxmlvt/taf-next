@@ -9,30 +9,31 @@ import type { ZipperDetails } from '@/lib/types';
 interface ZipperModalProps {
   id: number;
   name: string;
-  cache: Map<number, ZipperDetails>;
+  cache: Map<string, ZipperDetails>;
+  cacheKey: string;
   onClose: () => void;
 }
 
-export default function ZipperModal({ id, name, cache, onClose }: ZipperModalProps) {
+export default function ZipperModal({ id, name, cache, cacheKey, onClose }: ZipperModalProps) {
   const t = useTranslations('zipper');
   const locale = useLocale();
-  const [data, setData] = useState<ZipperDetails | null>(cache.get(id) || null);
-  const [loading, setLoading] = useState(!cache.has(id));
+  const [data, setData] = useState<ZipperDetails | null>(cache.get(cacheKey) || null);
+  const [loading, setLoading] = useState(!cache.has(cacheKey));
 
   const contactHref = locale === 'en' ? '/contact/' : '/pl/contact/';
 
   useEffect(() => {
-    if (!cache.has(id)) {
-      fetch(`/api/zipper/${id}`)
+    if (!cache.has(cacheKey)) {
+      fetch(`/api/zipper/${id}?lang=${locale}`)
         .then(r => r.json())
         .then(d => {
-          cache.set(id, d);
+          cache.set(cacheKey, d);
           setData(d);
           setLoading(false);
         })
         .catch(() => setLoading(false));
     }
-  }, [id, cache]);
+  }, [id, locale, cache, cacheKey]);
 
   const handleKey = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose();
@@ -78,14 +79,20 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
             {/* Left: image — object-contain so full product is visible */}
             <div className="sm:w-[45%] flex-shrink-0 bg-gray-50 flex items-center justify-center min-h-[390px] sm:min-h-[590px]">
               <div className="relative w-full h-full min-h-[390px] sm:min-h-[590px]">
-                <Image
-                  src={data.thumbnailUrl}
-                  alt={data.thumbnailAlt || data.name}
-                  fill
-                  priority
-                  className="object-contain p-4"
-                  sizes="(max-width: 640px) 100vw, 45vw"
-                />
+                {data.thumbnailUrl ? (
+                  <Image
+                    src={data.thumbnailUrl}
+                    alt={data.thumbnailAlt || data.name}
+                    fill
+                    priority
+                    className="object-contain p-4"
+                    sizes="(max-width: 640px) 100vw, 45vw"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-300 text-sm font-[Jost]">
+                    —
+                  </div>
+                )}
               </div>
             </div>
 
@@ -128,20 +135,22 @@ export default function ZipperModal({ id, name, cache, onClose }: ZipperModalPro
                   </h3>
                   <div className="flex flex-wrap gap-4">
                     {data.applicationIcons.map((icon, i) => (
-                      <div key={i} className="flex flex-col items-center gap-1.5 w-16">
-                        <div className="relative w-12 h-12">
-                          <Image
-                            src={icon.url}
-                            alt={icon.label}
-                            fill
-                            className="object-contain"
-                            sizes="48px"
-                          />
+                      icon.url ? (
+                        <div key={i} className="flex flex-col items-center gap-1.5 w-16">
+                          <div className="relative w-12 h-12">
+                            <Image
+                              src={icon.url}
+                              alt={icon.label}
+                              fill
+                              className="object-contain"
+                              sizes="48px"
+                            />
+                          </div>
+                          <span className="font-[Jost] text-[10px] text-gray-500 text-center leading-tight">
+                            {icon.label}
+                          </span>
                         </div>
-                        <span className="font-[Jost] text-[10px] text-gray-500 text-center leading-tight">
-                          {icon.label}
-                        </span>
-                      </div>
+                      ) : null
                     ))}
                   </div>
                 </div>

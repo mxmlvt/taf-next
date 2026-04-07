@@ -1,12 +1,13 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import type { ZipperCard as ZipperCardType } from '@/lib/types';
 import ZipperModal from './ZipperModal';
 
 // In-memory cache shared across all card instances in same session
-const detailsCache = new Map<number, import('@/lib/types').ZipperDetails>();
+// Keyed by "${id}-${locale}" to avoid stale translations across language switches
+const detailsCache = new Map<string, import('@/lib/types').ZipperDetails>();
 
 interface ZipperCardProps {
   zipper: ZipperCardType;
@@ -14,14 +15,17 @@ interface ZipperCardProps {
 
 export default function ZipperCard({ zipper }: ZipperCardProps) {
   const t = useTranslations('zipper');
+  const locale = useLocale();
   const [modalOpen, setModalOpen] = useState(false);
 
+  const cacheKey = `${zipper.id}-${locale}`;
+
   const prefetch = () => {
-    if (!detailsCache.has(zipper.id)) {
-      fetch(`/api/zipper/${zipper.id}`)
+    if (!detailsCache.has(cacheKey)) {
+      fetch(`/api/zipper/${zipper.id}?lang=${locale}`)
         .then(r => r.json())
         .then(d => {
-          detailsCache.set(zipper.id, d);
+          detailsCache.set(cacheKey, d);
           // Preload product image so it's ready when modal opens
           if (d?.thumbnailUrl) {
             const img = new window.Image();
@@ -67,6 +71,7 @@ export default function ZipperCard({ zipper }: ZipperCardProps) {
           id={zipper.id}
           name={zipper.name}
           cache={detailsCache}
+          cacheKey={cacheKey}
           onClose={() => setModalOpen(false)}
         />
       )}

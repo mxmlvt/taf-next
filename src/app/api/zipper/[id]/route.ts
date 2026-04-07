@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cleanZipperName } from '@/lib/utils';
+import { PL_OVERRIDES } from '@/lib/pl-zipper-overrides';
 
 const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
 const OLD_HTTPS = 'https://trimsandfasteners.com/wp-content/';
@@ -40,6 +41,10 @@ export async function GET(
     const raw = await res.json();
     const data = rewriteUrls(raw) as typeof raw;
     data.name = cleanZipperName(data.name);
+    // Apply Polish description overrides for products not translated in WP
+    if (lang === 'pl' && PL_OVERRIDES[numId]) {
+      Object.assign(data, PL_OVERRIDES[numId]);
+    }
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',

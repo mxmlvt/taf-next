@@ -55,6 +55,7 @@ export default function ZipperCard({ zipper }: ZipperCardProps) {
               alt={zipper.thumbnailAlt || zipper.name}
               width={400}
               height={400}
+              unoptimized
               className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />

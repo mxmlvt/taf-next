@@ -85,6 +85,7 @@ export default function ZipperModal({ id, name, cache, cacheKey, onClose }: Zipp
                     alt={data.thumbnailAlt || data.name}
                     fill
                     priority
+                    unoptimized
                     className="object-contain p-4"
                     sizes="(max-width: 640px) 100vw, 45vw"
                   />

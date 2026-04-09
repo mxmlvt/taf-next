@@ -5,7 +5,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './src/lib/imageLoader.ts',
     remotePatterns: [
       {
         protocol: 'https',

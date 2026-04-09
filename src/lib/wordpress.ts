@@ -2,6 +2,20 @@ import type { Locale, WPPage, WPPost, WPProduct, ZipperCard, ZipperDetails, Menu
 import { cleanZipperName } from './utils';
 
 const WP_API = 'https://wp.trimsandfasteners.com/wp-json';
+const OLD_HTTPS = 'https://trimsandfasteners.com/wp-content/';
+const OLD_HTTP  = 'http://trimsandfasteners.com/wp-content/';
+const NEW_WP    = 'https://wp.trimsandfasteners.com/wp-content/';
+
+function rewriteUrls(obj: unknown): unknown {
+  if (typeof obj === 'string') return obj.replaceAll(OLD_HTTPS, NEW_WP).replaceAll(OLD_HTTP, NEW_WP);
+  if (Array.isArray(obj)) return obj.map(rewriteUrls);
+  if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj as Record<string, unknown>).map(([k, v]) => [k, rewriteUrls(v)])
+    );
+  }
+  return obj;
+}
 
 // Lang param: Polylang uses 'en' | 'pl'
 function langParam(locale: Locale) {
@@ -112,7 +126,8 @@ export async function getZippersByIds(ids: number[], locale: Locale): Promise<Zi
       { next: { revalidate: 3600 } }
     );
     if (!res.ok) return [];
-    const data: ZipperCard[] = await res.json();
+    const raw: ZipperCard[] = await res.json();
+    const data = rewriteUrls(raw) as ZipperCard[];
     return data.map(z => ({ ...z, name: cleanZipperName(z.name) }));
   } catch {
     return [];

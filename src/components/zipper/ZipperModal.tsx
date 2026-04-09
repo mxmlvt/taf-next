@@ -25,7 +25,7 @@ export default function ZipperModal({ id, name, cache, cacheKey, onClose }: Zipp
   useEffect(() => {
     if (!cache.has(cacheKey)) {
       fetch(`/api/zipper/${id}?lang=${locale}`)
-        .then(r => r.json())
+        .then(r => { if (!r.ok) throw new Error(); return r.json(); })
         .then(d => {
           cache.set(cacheKey, d);
           setData(d);

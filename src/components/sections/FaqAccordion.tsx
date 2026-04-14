@@ -16,6 +16,19 @@ export default function FaqAccordion({ items, locale = 'en' }: FaqAccordionProps
 
   if (!items || items.length === 0) return null;
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer.replace(/<[^>]*>/g, ''),
+      },
+    })),
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h2 className="font-[Jost] text-2xl sm:text-3xl font-light text-[#111] mb-8">
@@ -63,6 +76,10 @@ export default function FaqAccordion({ items, locale = 'en' }: FaqAccordionProps
           );
         })}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
     </section>
   );
 }

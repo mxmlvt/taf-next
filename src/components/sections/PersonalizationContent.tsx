@@ -220,6 +220,20 @@ export default function PersonalizationContent({ locale }: Props) {
 
       {/* FAQ */}
       <section className="py-16 bg-[#f5f3ef]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map(faq => ({
+                '@type': 'Question',
+                name: faq.q,
+                acceptedAnswer: { '@type': 'Answer', text: faq.a },
+              })),
+            }),
+          }}
+        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-[Jost] text-2xl sm:text-3xl font-light mb-10 text-[#111]">FAQ</h2>
           <div className="space-y-2">

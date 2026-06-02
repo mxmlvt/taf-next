@@ -231,39 +231,44 @@ export default function CookieBanner() {
     </div>
   );
 
-  /* ─── MAIN BANNER ─── */
+  /* ─── MAIN BANNER — centered popup ─── */
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[#111] text-white shadow-2xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          {/* Text */}
-          <div className="flex-1 min-w-0">
-            <p className="font-[Jost] text-sm text-white/80 leading-relaxed">
-              {isEn
-                ? <>We use cookies to improve your experience and analyse site traffic. <Link href={privacyHref} className="underline text-white/50 hover:text-white transition-colors">Privacy Policy</Link></>
-                : <>Używamy plików cookie w celu poprawy komfortu przeglądania i analizy ruchu. <Link href={privacyHref} className="underline text-white/50 hover:text-white transition-colors">Polityka prywatności</Link></>
-              }
-            </p>
-          </div>
-          {/* Buttons */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 flex-wrap">
-            <button
-              onClick={rejectAll}
-              className="font-[Jost] text-sm text-white/50 hover:text-white transition-colors underline"
-            >
-              {isEn ? 'Reject all' : 'Odrzuć wszystkie'}
-            </button>
+    <div className="fixed inset-0 z-[200] flex items-center justify-center px-4">
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      <div className="relative z-10 w-full max-w-md bg-white shadow-2xl">
+        <div className="px-8 pt-8 pb-6">
+          <h2 className="font-[Jost] text-lg font-normal text-[#111] mb-3">
+            {isEn ? 'We value your privacy' : 'Szanujemy Twoją prywatność'}
+          </h2>
+          <p className="font-[Jost] text-sm text-gray-500 leading-relaxed">
+            {isEn
+              ? <>We use cookies to improve your experience and measure the effectiveness of our advertising. You can manage your preferences at any time. <Link href={privacyHref} className="underline text-gray-400 hover:text-gray-600 transition-colors">Privacy Policy</Link></>
+              : <>Używamy plików cookie, aby poprawić komfort przeglądania i mierzyć skuteczność reklam. Możesz zarządzać preferencjami w każdej chwili. <Link href={privacyHref} className="underline text-gray-400 hover:text-gray-600 transition-colors">Polityka prywatności</Link></>
+            }
+          </p>
+        </div>
+
+        <div className="px-8 pb-8 flex flex-col gap-2">
+          <button
+            onClick={acceptAll}
+            className="w-full font-[Jost] text-sm bg-[#111] text-white px-6 py-3 hover:bg-black transition-colors"
+          >
+            {isEn ? 'Accept all' : 'Akceptuj wszystkie'}
+          </button>
+          <div className="flex gap-2">
             <button
               onClick={() => { setPrefs(loadPrefs() ?? { analytics: false, marketing: false }); setView('settings'); }}
-              className="font-[Jost] text-sm border border-white/30 text-white/80 px-4 py-2 hover:border-white hover:text-white transition-colors"
+              className="flex-1 font-[Jost] text-sm border border-gray-200 text-[#111] px-4 py-2.5 hover:border-[#111] transition-colors"
             >
               {isEn ? 'Settings' : 'Ustawienia'}
             </button>
             <button
-              onClick={acceptAll}
-              className="font-[Jost] text-sm bg-white text-black px-6 py-2 hover:bg-gray-100 transition-colors"
+              onClick={rejectAll}
+              className="flex-1 font-[Jost] text-sm border border-gray-200 text-gray-400 px-4 py-2.5 hover:border-gray-400 hover:text-gray-600 transition-colors"
             >
-              {isEn ? 'Accept all' : 'Akceptuj wszystkie'}
+              {isEn ? 'Reject all' : 'Odrzuć wszystkie'}
             </button>
           </div>
         </div>

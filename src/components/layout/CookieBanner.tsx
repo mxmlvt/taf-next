@@ -210,19 +210,19 @@ export default function CookieBanner() {
         <div className="px-6 py-4 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <button
             onClick={rejectAll}
-            className="font-[Jost] text-sm border border-gray-200 text-gray-500 px-4 py-2.5 hover:border-gray-400 hover:text-gray-700 transition-colors"
+            className="font-[Jost] text-sm border border-gray-200 text-gray-500 px-4 py-2.5 hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
           >
             {isEn ? 'Reject all' : 'Odrzuć wszystkie'}
           </button>
           <button
             onClick={saveCustom}
-            className="font-[Jost] text-sm border border-[#111] text-[#111] px-4 py-2.5 hover:bg-gray-50 transition-colors flex-1"
+            className="font-[Jost] text-sm border border-[#111] text-[#111] px-4 py-2.5 hover:bg-gray-50 transition-colors flex-1 cursor-pointer"
           >
             {isEn ? 'Save preferences' : 'Zapisz ustawienia'}
           </button>
           <button
             onClick={acceptAll}
-            className="font-[Jost] text-sm bg-[#111] text-white px-4 py-2.5 hover:bg-gray-800 transition-colors flex-1"
+            className="font-[Jost] text-sm bg-[#111] text-white px-4 py-2.5 hover:bg-gray-800 transition-colors flex-1 cursor-pointer"
           >
             {isEn ? 'Accept all' : 'Akceptuj wszystkie'}
           </button>
@@ -253,20 +253,20 @@ export default function CookieBanner() {
         <div className="px-8 pb-8 flex flex-col gap-2">
           <button
             onClick={acceptAll}
-            className="w-full font-[Jost] text-sm bg-[#111] text-white px-6 py-3 hover:bg-black transition-colors"
+            className="w-full font-[Jost] text-sm bg-[#111] text-white px-6 py-3 hover:bg-black transition-colors cursor-pointer"
           >
             {isEn ? 'Accept all' : 'Akceptuj wszystkie'}
           </button>
           <div className="flex gap-2">
             <button
               onClick={() => { setPrefs(loadPrefs() ?? { analytics: false, marketing: false }); setView('settings'); }}
-              className="flex-1 font-[Jost] text-sm border border-gray-200 text-[#111] px-4 py-2.5 hover:border-[#111] transition-colors"
+              className="flex-1 font-[Jost] text-sm border border-gray-200 text-[#111] px-4 py-2.5 hover:border-[#111] transition-colors cursor-pointer"
             >
               {isEn ? 'Settings' : 'Ustawienia'}
             </button>
             <button
               onClick={rejectAll}
-              className="flex-1 font-[Jost] text-sm border border-gray-200 text-gray-400 px-4 py-2.5 hover:border-gray-400 hover:text-gray-600 transition-colors"
+              className="flex-1 font-[Jost] text-sm border border-gray-200 text-gray-400 px-4 py-2.5 hover:border-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
             >
               {isEn ? 'Reject all' : 'Odrzuć wszystkie'}
             </button>

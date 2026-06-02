@@ -149,6 +149,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                     items={isEn ? ['Heavy', 'Metal elements accumulate heat'] : ['Ciężkie', 'Metal kumuluje ciepło']}
                   />
                 </div>
+                <button
+                  onClick={() => {
+                    window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-metal' } }));
+                  }}
+                  className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+                >
+                  {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+                </button>
               </div>
               <div className="overflow-hidden group aspect-[4/3]">
                 <Image
@@ -207,6 +215,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                     items={isEn ? ['Lower transverse strength'] : ['Niższa wytrzymałość poprzeczna']}
                   />
                 </div>
+                <button
+                  onClick={() => {
+                    window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-plastic' } }));
+                  }}
+                  className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+                >
+                  {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+                </button>
               </div>
             </div>
           </div>
@@ -242,6 +258,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                   </div>
                 ))}
               </div>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-plastic' } }));
+                }}
+                className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+              >
+                {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+              </button>
             </div>
             <div className="overflow-hidden group aspect-[4/3]">
               <Image

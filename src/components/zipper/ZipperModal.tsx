@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { ZipperDetails } from '@/lib/types';
@@ -20,7 +19,10 @@ export default function ZipperModal({ id, name, cache, cacheKey, onClose }: Zipp
   const [data, setData] = useState<ZipperDetails | null>(cache.get(cacheKey) || null);
   const [loading, setLoading] = useState(!cache.has(cacheKey));
 
-  const contactHref = locale === 'en' ? '/contact/' : '/pl/contact/';
+  const handleInquiry = () => {
+    window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: id } }));
+    onClose();
+  };
 
   useEffect(() => {
     if (!cache.has(cacheKey)) {
@@ -182,13 +184,12 @@ export default function ZipperModal({ id, name, cache, cacheKey, onClose }: Zipp
 
               {/* Contact CTA */}
               <div className="mt-auto pt-4 border-t border-gray-100">
-                <Link
-                  href={contactHref}
-                  onClick={onClose}
-                  className="block w-full bg-[#111111] text-white font-[Jost] text-sm text-center py-3 hover:bg-black transition-colors"
+                <button
+                  onClick={handleInquiry}
+                  className="block w-full bg-[#111111] text-white font-[Jost] text-sm text-center py-3 hover:bg-black transition-colors cursor-pointer"
                 >
                   {locale === 'en' ? 'Contact us about this product' : 'Zapytaj o ten produkt'}
-                </Link>
+                </button>
               </div>
             </div>
           </>

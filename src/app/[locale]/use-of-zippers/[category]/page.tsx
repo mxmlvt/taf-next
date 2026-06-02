@@ -16,6 +16,7 @@ import FurnitureContent from '@/components/sections/FurnitureContent';
 import BucklesContent from '@/components/sections/BucklesContent';
 import HeroAnimator from '@/components/ui/HeroAnimator';
 import SmoothAnchor from '@/components/ui/SmoothAnchor';
+import ProductInquiryForm from '@/components/sections/ProductInquiryForm';
 
 // EN slug → WP slug mapping (both EN and PL)
 const CATEGORY_SLUGS: Record<string, { wpSlugEn: string; wpSlugPl: string; labelEn: string; labelPl: string; heroImg: string; subtitleEn: string; subtitlePl: string; seoTitleEn: string; seoDescEn: string; seoTitlePl: string; seoDescPl: string }> = {
@@ -37,6 +38,17 @@ const PL_TO_EN: Record<string, string> = {
   meble: 'furniture',
   'odziez-ognioodporna': 'fire-protection',
   'zapiecia-elementy-plastikowe': 'buckles-plastic-hardware',
+};
+
+const FIRE_PROTECTION_PRODUCTS: Record<string, { id: string; name: string; thumbnailUrl: string }[]> = {
+  en: [
+    { id: 'fr-metal', name: 'Fire Retardant Metal Zipper (M8 NOMEX)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
+    { id: 'fr-plastic', name: 'Fire Retardant Plastic Zipper (D8 FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+  ],
+  pl: [
+    { id: 'fr-metal', name: 'Metalowy zamek ognioodporny (M8 NOMEX)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
+    { id: 'fr-plastic', name: 'Plastikowy zamek ognioodporny (D8 FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+  ],
 };
 
 type Props = { params: Promise<{ locale: string; category: string }> };
@@ -191,6 +203,16 @@ export default async function CategoryPage({ params }: Props) {
       {enSlug === 'fashion' && <FashionContent locale={locale} position="below" />}
       {enSlug === 'furniture' && <FurnitureContent locale={locale} position="below" />}
       {enSlug === 'buckles-plastic-hardware' && <BucklesContent locale={locale} position="below" />}
+
+      {/* Product inquiry form */}
+      <ProductInquiryForm
+        products={
+          zippers.length > 0
+            ? zippers.map((z) => ({ id: z.id, name: z.name, thumbnailUrl: z.thumbnailUrl }))
+            : (enSlug === 'fire-protection' ? (FIRE_PROTECTION_PRODUCTS[lang] ?? []) : [])
+        }
+        locale={lang}
+      />
 
     </div>
   );

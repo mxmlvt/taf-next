@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-const MAIL_URL = 'https://wp.trimsandfasteners.com/wp-json/taf/v1/contact';
+const resend = new Resend(process.env.RESEND_API_KEY);
 const NOTIFY_EMAIL = 'maksymilianmazurkiewicz@gmail.com';
 
 interface InquiryBody {
@@ -40,20 +41,21 @@ export async function POST(req: NextRequest) {
       .filter(Boolean)
       .join('\n');
 
-    // Send via WP mail endpoint
-    const mailRes = await fetch(MAIL_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        to: NOTIFY_EMAIL,
-        subject: `Product Inquiry: ${company} | TAF`,
-        body: fullMessage,
-        replyTo: email,
-      }),
+    // Send via Resend
+    const { error } = await resend.emails.send({
+      from: 'TAF Inquiry <onboarding@resend.dev>',
+      to: NOTIFY_EMAIL,
+      replyTo: email,
+      subject: `Product Inquiry: ${company} | TAF`,
+      text: fullMessage,
     });
 
-    const mailData = await mailRes.json();
-    return NextResponse.json(mailData, { status: mailRes.ok ? 200 : 500 });
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json({ status: 'mail_failed' }, { status: 500 });
+    }
+
+    return NextResponse.json({ status: 'mail_sent' }, { status: 200 });
   } catch (err) {
     console.error('Product Inquiry API error:', err);
     return NextResponse.json({ status: 'error' }, { status: 500 });

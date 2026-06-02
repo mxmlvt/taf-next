@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const CF7_URL = 'https://wp.trimsandfasteners.com/wp-json/contact-form-7/v1/contact-forms/1647/feedback';
+const MAIL_URL = 'https://wp.trimsandfasteners.com/wp-json/taf/v1/contact';
 const NOTIFY_EMAIL = 'maksymilianmazurkiewicz@gmail.com';
 
 interface InquiryBody {
@@ -40,27 +40,20 @@ export async function POST(req: NextRequest) {
       .filter(Boolean)
       .join('\n');
 
-    // Forward to CF7
-    const cf7Res = await fetch(CF7_URL, {
+    // Send via WP mail endpoint
+    const mailRes = await fetch(MAIL_URL, {
       method: 'POST',
-      body: new URLSearchParams({
-        'your-name': company,
-        'your-email': email,
-        'your-company': company,
-        'your-message': fullMessage,
-        '_wpcf7_locale': locale,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        to: NOTIFY_EMAIL,
+        subject: `Product Inquiry: ${company} | TAF`,
+        body: fullMessage,
+        replyTo: email,
       }),
     });
 
-    // Also send direct notification via WP mail endpoint as backup
-    fetch('https://wp.trimsandfasteners.com/wp-json/taf/v1/notify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ to: NOTIFY_EMAIL, subject: `Product Inquiry: ${company}`, body: fullMessage }),
-    }).catch(() => { /* silent fallback */ });
-
-    const cf7Data = await cf7Res.json();
-    return NextResponse.json(cf7Data, { status: cf7Res.ok ? 200 : 500 });
+    const mailData = await mailRes.json();
+    return NextResponse.json(mailData, { status: mailRes.ok ? 200 : 500 });
   } catch (err) {
     console.error('Product Inquiry API error:', err);
     return NextResponse.json({ status: 'error' }, { status: 500 });

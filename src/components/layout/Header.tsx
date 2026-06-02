@@ -50,32 +50,32 @@ const USE_CATS_EN = [
 const USE_CATS_PL = [
   {
     label: 'Zamki do odzieży ognioodpornej',
-    href: '/pl/use-of-zippers/fire-protection/',
+    href: '/pl/zastosowanie-zamkow/odziez-ognioodporna/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-9.png',
   },
   {
     label: 'Zamki dla wojska',
-    href: '/pl/use-of-zippers/military/',
+    href: '/pl/zastosowanie-zamkow/wojsko/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/04/NZIP-HEADER-8.png',
   },
   {
     label: 'Zamki dla kolarstwa i sportu',
-    href: '/pl/use-of-zippers/cycling-sportswear/',
+    href: '/pl/zastosowanie-zamkow/odziez-sportowa/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/zamki-dla-odziezy-sportowej.png',
   },
   {
     label: 'Zamki do odzieży dziecięcej',
-    href: '/pl/use-of-zippers/baby/',
+    href: '/pl/zastosowanie-zamkow/dzieci/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-42.png',
   },
   {
     label: 'Zamki dla mody',
-    href: '/pl/use-of-zippers/fashion/',
+    href: '/pl/zastosowanie-zamkow/moda/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/Projekt-bez-nazwy-43.png',
   },
   {
     label: 'Zapięcia i elementy plastikowe',
-    href: '/pl/use-of-zippers/buckles-plastic-hardware/',
+    href: '/pl/zastosowanie-zamkow/zapiecia-elementy-plastikowe/',
     img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/Projekt-bez-nazwy-79.png',
   },
 ];
@@ -173,10 +173,10 @@ export default function Header({ menu, translations }: HeaderProps) {
         { label: 'Personalization', href: '/personalization/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
       ]
     : [
-        { label: 'Zamki plastikowe', href: '/pl/type-of-zippers/plastic-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
-        { label: 'Zamki nylonowe', href: '/pl/type-of-zippers/nylon-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Tabela rozmiarów taśm nylonowych', href: '/pl/nylon-zipper-chain-size-chart/' } },
-        { label: 'Zamki metalowe', href: '/pl/type-of-zippers/metal-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
-        { label: 'Personalizacja', href: '/pl/personalization/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
+        { label: 'Zamki plastikowe', href: '/pl/rodzaje-zamkow/plastic-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ffwefw-scaled.jpeg' },
+        { label: 'Zamki nylonowe', href: '/pl/rodzaje-zamkow/nylon-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/nylonzipper1-scaled.jpg', sub: { label: 'Tabela rozmiarów taśm nylonowych', href: '/pl/tasmy-spiralne-zestawienie-rozmiarow/' } },
+        { label: 'Zamki metalowe', href: '/pl/rodzaje-zamkow/metal-zippers/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/ykkmetal-scaled.jpg' },
+        { label: 'Personalizacja', href: '/pl/personalizacja/', img: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/logobymoulding-scaled.png' },
       ];
 
   // Simple nav items (non-dropdown)
@@ -187,9 +187,9 @@ export default function Header({ menu, translations }: HeaderProps) {
         { label: 'Contact', href: '/contact/' },
       ]
     : [
-        { label: 'O nas', href: '/pl/about-us/' },
+        { label: 'O nas', href: '/pl/o-nas/' },
         { label: 'Blog', href: '/pl/blog/' },
-        { label: 'Kontakt', href: '/pl/contact/' },
+        { label: 'Kontakt', href: '/pl/kontakt/' },
       ];
 
   return (
@@ -243,7 +243,7 @@ export default function Header({ menu, translations }: HeaderProps) {
 
             {/* Type of Zippers — link navigates, hover shows mega menu */}
             <Link
-              href={locale === 'en' ? '/type-of-zippers/' : '/pl/type-of-zippers/'}
+              href={locale === 'en' ? '/type-of-zippers/' : '/pl/rodzaje-zamkow/'}
               className="flex items-center gap-1 px-3 py-2 text-sm font-normal text-gray-700 hover:text-black transition-colors font-[Jost]"
               onMouseEnter={() => setOpenDropdown('type')}
             >
@@ -253,7 +253,7 @@ export default function Header({ menu, translations }: HeaderProps) {
 
             {/* Use of Zippers — link navigates, hover shows mega menu */}
             <Link
-              href={locale === 'en' ? '/use-of-zippers/' : '/pl/use-of-zippers/'}
+              href={locale === 'en' ? '/use-of-zippers/' : '/pl/zastosowanie-zamkow/'}
               className="flex items-center gap-1 px-3 py-2 text-sm font-normal text-gray-700 hover:text-black transition-colors font-[Jost]"
               onMouseEnter={() => setOpenDropdown('use')}
             >

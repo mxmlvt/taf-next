@@ -269,7 +269,7 @@ export default function ProductInquiryForm({ products, locale }: ProductInquiryF
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-gray-600 font-[Jost] mb-1">
-                    {isEn ? 'Expected volume' : 'Oczekiwany wolumen'} *
+                    {isEn ? 'Expected product demand (pcs)' : 'Przewidywane zapotrzebowanie produktu w sztukach'} *
                   </label>
                   <select
                     required

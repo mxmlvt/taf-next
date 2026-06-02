@@ -9,6 +9,7 @@ declare global {
       ready: (cb: () => void) => void;
       execute: (siteKey: string, options: { action: string }) => Promise<string>;
     };
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -65,7 +66,17 @@ export default function ContactForm({ locale }: { locale: Locale }) {
         }),
       });
 
-      setStatus(res.ok ? 'success' : 'error');
+      if (res.ok) {
+        setStatus('success');
+        // Google Ads conversion tracking
+        if (window.gtag) {
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-18178687838/la4NCLLn-rccEN6Go9xD',
+          });
+        }
+      } else {
+        setStatus('error');
+      }
     } catch {
       setStatus('error');
     }

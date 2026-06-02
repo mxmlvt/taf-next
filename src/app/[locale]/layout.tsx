@@ -12,6 +12,7 @@ import PageTransition from '@/components/ui/PageTransition';
 import '../globals.css';
 
 const GA_ID = 'G-1WQEEEEQ4B';
+const AW_ID = 'AW-18178687838';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://trimsandfasteners.com'),
@@ -67,6 +68,7 @@ export default async function LocaleLayout({
         />
         <Script id="ga4-config" strategy="afterInteractive">{`
           gtag('config', '${GA_ID}', { send_page_view: true });
+          gtag('config', '${AW_ID}');
         `}</Script>
       </head>
       <body className="bg-white text-[#111111] antialiased">

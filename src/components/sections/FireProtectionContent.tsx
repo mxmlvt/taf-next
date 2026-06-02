@@ -320,6 +320,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                   </div>
                 ))}
               </div>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-fb40frgr' } }));
+                }}
+                className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+              >
+                {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+              </button>
             </div>
           </div>
         </div>
@@ -349,6 +357,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                   </div>
                 ))}
               </div>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-d8-two-way' } }));
+                }}
+                className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+              >
+                {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+              </button>
             </div>
             <div className="overflow-hidden group aspect-[4/3]">
               <Image
@@ -389,6 +405,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                     : 'Metalowy zamek ognioodporny na taśmie poliestrowej lub bawełnianej z impregnacją trudnopalną, z odpornością na pranie ok. 20 cykli. Stosowany w odzieży roboczej spełniającej normy ISO-EN14116 / NFPA 2112/2113.'}
                 </p>
               </div>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-m3m5m8' } }));
+                }}
+                className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+              >
+                {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+              </button>
             </div>
           </div>
         </div>
@@ -409,6 +433,14 @@ export default function FireProtectionContent({ locale, position }: Props) {
                     : 'Standardowy zamek na taśmie meta-aramidowej, stosowany w ubraniach bojowych przez straże pożarne na całym świecie. Spełnia wymagania norm ISO-EN469 / NFPA1975.'}
                 </p>
               </div>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('taf-inquiry-select', { detail: { productId: 'fr-m8-nomex' } }));
+                }}
+                className="mt-6 bg-[#111] text-white font-[Jost] text-sm px-8 py-3 hover:bg-black transition-colors cursor-pointer"
+              >
+                {isEn ? 'Inquire about this product' : 'Zapytaj o ten produkt'}
+              </button>
             </div>
             <div className="overflow-hidden group aspect-[4/3]">
               <Image

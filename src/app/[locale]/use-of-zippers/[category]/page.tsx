@@ -42,12 +42,22 @@ const PL_TO_EN: Record<string, string> = {
 
 const FIRE_PROTECTION_PRODUCTS: Record<string, { id: string; name: string; thumbnailUrl: string }[]> = {
   en: [
-    { id: 'fr-metal', name: 'Fire Retardant Metal Zipper (M8 NOMEX)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
-    { id: 'fr-plastic', name: 'Fire Retardant Plastic Zipper (D8 FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+    { id: 'fr-metal', name: 'Fire Retardant Metal Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
+    { id: 'fr-plastic', name: 'Fire Retardant Plastic Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+    { id: 'fr-d8-open-end', name: 'D8 FR Open-End Molded Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/1.jpg' },
+    { id: 'fr-d8-two-way', name: 'D8 FR Two-Way Separating Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/8.jpg' },
+    { id: 'fr-m3m5m8', name: 'M3 / M5 / M8 FR Treated Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/11-256x1024.jpg' },
+    { id: 'fr-m8-nomex', name: 'M8 NOMEX Firefighter Zipper', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/12.jpg' },
+    { id: 'fr-fb40frgr', name: 'FB40FRGR Suspender Buckle (FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/5.jpg' },
   ],
   pl: [
-    { id: 'fr-metal', name: 'Metalowy zamek ognioodporny (M8 NOMEX)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
-    { id: 'fr-plastic', name: 'Plastikowy zamek ognioodporny (D8 FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+    { id: 'fr-metal', name: 'Metalowy zamek ognioodporny', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/06/metalowezamkitrudnopalne.jpg' },
+    { id: 'fr-plastic', name: 'Plastikowy zamek ognioodporny', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/03/Photoroom_20250328_052331-768x1024.jpeg' },
+    { id: 'fr-d8-open-end', name: 'D8 zamek formowany ognioodporny rozdzielny', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/1.jpg' },
+    { id: 'fr-d8-two-way', name: 'D8 zamek formowany ognioodporny dwusuwakowy', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/8.jpg' },
+    { id: 'fr-m3m5m8', name: 'M3 / M5 / M8 z impregnacją ognioodporną', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/11-256x1024.jpg' },
+    { id: 'fr-m8-nomex', name: 'M8 NOMEX do ubrań strażackich', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/12.jpg' },
+    { id: 'fr-fb40frgr', name: 'Klamra szelkowa FB40FRGR (FR)', thumbnailUrl: 'https://wp.trimsandfasteners.com/wp-content/uploads/2025/09/5.jpg' },
   ],
 };
 

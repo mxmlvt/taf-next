@@ -139,17 +139,33 @@ export default function ProductInquiryForm({ products, locale }: ProductInquiryF
 
         {status === 'success' ? (
           <div className="flex items-center justify-center py-16">
-            <div className="text-center">
+            <div className="text-center max-w-md">
               <div className="w-12 h-12 bg-green-100 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <p className="font-[Jost] text-gray-700">
+              <p className="font-[Jost] text-gray-700 mb-6">
                 {isEn
                   ? 'Thank you! Your inquiry has been sent. We will get back to you shortly.'
                   : 'Dziękujemy! Twoje zapytanie zostało wysłane. Skontaktujemy się wkrótce.'}
               </p>
+              <p className="font-[Jost] text-sm text-gray-500 mb-3">
+                {isEn
+                  ? 'You can also reach us directly:'
+                  : 'Możesz też skontaktować się z nami bezpośrednio:'}
+              </p>
+              <div className="flex flex-col items-center gap-2">
+                <a href="tel:+48221101101" className="font-[Jost] text-sm text-[#111] hover:underline transition-colors">
+                  +48 22 1101101
+                </a>
+                <a href="tel:+48723331331" className="font-[Jost] text-sm text-[#111] hover:underline transition-colors">
+                  +48 723 331 331
+                </a>
+                <a href="mailto:contact@trimsandfasteners.com" className="font-[Jost] text-sm text-gray-400 hover:text-[#111] transition-colors">
+                  contact@trimsandfasteners.com
+                </a>
+              </div>
             </div>
           </div>
         ) : (

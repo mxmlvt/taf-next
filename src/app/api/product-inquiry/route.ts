@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const getResend = () => new Resend(process.env.RESEND_API_KEY!);
 const NOTIFY_EMAIL = 'maksymilianmazurkiewicz@gmail.com';
 
 interface InquiryBody {
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       .join('\n');
 
     // Send via Resend
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: 'TAF Inquiry <onboarding@resend.dev>',
       to: NOTIFY_EMAIL,
       replyTo: email,

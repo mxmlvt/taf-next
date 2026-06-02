@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const getResend = () => new Resend(process.env.RESEND_API_KEY!);
 const NOTIFY_EMAIL = 'maksymilianmazurkiewicz@gmail.com';
 const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
       message,
     ].filter(Boolean).join('\n');
 
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: 'TAF Contact <onboarding@resend.dev>',
       to: NOTIFY_EMAIL,
       replyTo: email,

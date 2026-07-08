@@ -3,20 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
+    "@portabletext/react": "^6.2.0",
+    "@sanity/client": "^7.23.0",
+    "@sanity/vision": "^6.4.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.577.0",
     "next": "16.2.1",
     "next-intl": "^4.8.3",
+    "next-sanity": "^13.1.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "resend": "^6.12.4"
+    "resend": "^6.12.4",
+    "sanity": "^6.4.0",
+    "styled-components": "^6.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
